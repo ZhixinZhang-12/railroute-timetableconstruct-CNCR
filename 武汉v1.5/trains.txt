@@ -1,0 +1,43 @@
++++stations
+# For reference, ignored during import
+# Format: 
+# StationReference = Name | MayBeInitial | Platforms
+#
+# a = 武汉站高速场 | 1 | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14 
+# b = 京广高速咸宁北方向 | 1 | 1, 2 
+# c = 武汉动车所 | 1 | 3, 4, 2, 1 
+# d = 武九客专葛店南方向 | 1 | 2, 1 
+# e = 京广高速孝感北方向 | 1 | 2, 1 
+# f = 沪蓉线红安西方向 | 1 | 1, 2 
+# g = 滠武线滠口方向 | 1 | 2, 1 
+# h = 沪蓉线汉口方向 | 1 | 2, 1 
+# i = 丹水池联络线汉口方向 | 1 | 2, 1 
+# j = 至京广线 | 1 | 2, 1 
+# k = 武汉站货车外绕线 | 1 | 2, 1 
+# l = 武汉南线路所 | 1 |  
+# m = 横店东 | 1 |  
+# n = L1L2线路所 | 1 |  
+# o = 武汉站综合场 | 1 | 1, 2, 3, 4, 5 
+
++++timetable
+# Format: 
+# ReportingNumber TrainType MaxSpeedKmph TrainComposition Flags : StationVisit1 StationVisit2 ...
+#
+# StationVisit format:
+# StationReference#PlatformNumber#From#DurationMinutes
+#
+# TrainType format:
+# COMMUTER | FREIGHT | IC | URBAN
+#
+# TrainComposition format:
+# vvv...
+# Each v represents one vehicle. L = locomotive (or control post), C = cargo car, P = passenger car
+#
+# Flags format:
+# ff
+# Each f is one flag. 0 = flag not set, 1 = flag set, X = position not used
+# Flag positions:
+# #1 unused (X)
+# #2 NoBrakingPenalization - if set (1), train does NOT receive penalization when braking at signals
+#
+133 COMMUTER 120 LPPPL X0 : c#1#08:00:00#0 a#6#08:03:00#2 b#1#08:07:00#0

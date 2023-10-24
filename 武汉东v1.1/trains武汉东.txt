@@ -1,0 +1,35 @@
++++stations
+# For reference, ignored during import
+# Format: 
+# StationReference = Name | MayBeInitial | Platforms
+#
+# a = 武汉东站城际场 | 1 | 5, 1, 6, 4, 2, 3 
+# b = 武汉东站存车线 | 1 | 1 
+# c = 余花联络线花山南方向 | 1 | 1, 2 
+# d = 余花联络线余家湾方向 | 1 | 2, 1 
+# e = 武咸城际咸宁南方向 | 1 | 1, 2 
+# f = 武昌南环线武昌南方向 | 1 | 1, 2 
+# g = 武汉东站普速场(没车) | 1 | 7, 4, 2, 1, 3, 5 
+# h = 武昌南环线何刘方向 | 1 | 2, 1 
+
++++timetable
+# Format: 
+# ReportingNumber TrainType MaxSpeedKmph TrainComposition Flags : StationVisit1 StationVisit2 ...
+#
+# StationVisit format:
+# StationReference#PlatformNumber#From#DurationMinutes
+#
+# TrainType format:
+# COMMUTER | FREIGHT | IC | URBAN
+#
+# TrainComposition format:
+# vvv...
+# Each v represents one vehicle. L = locomotive (or control post), C = cargo car, P = passenger car
+#
+# Flags format:
+# ff
+# Each f is one flag. 0 = flag not set, 1 = flag set, X = position not used
+# Flag positions:
+# #1 unused (X)
+# #2 NoBrakingPenalization - if set (1), train does NOT receive penalization when braking at signals
+#

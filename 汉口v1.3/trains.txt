@@ -1,0 +1,36 @@
++++stations
+# For reference, ignored during import
+# Format: 
+# StationReference = Name | MayBeInitial | Platforms
+#
+# a = 汉口动车所 | 1 | 1, 2 
+# b = 京广铁路联络线丹水池方向(外侧) | 1 | 1, 2 
+# c = 沪蓉线南京南方向(内侧) | 1 | 1, 2 
+# d = 汉孝城际孝感东方向 | 1 | 1, 2 
+# e = 汉口站 | 1 | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 
+# f = 汉口汉西联络线汉西站方向(最外侧) | 1 | 1, 2 
+# g = 沪蓉线重庆方向(中间) | 1 | 1, 2 
+# h = 汉丹线丹江口方向(最内侧) | 1 | 1, 2 
+# i = 客整所12/机务折返段3 | 1 | 1, 2, 3 
+
++++timetable
+# Format: 
+# ReportingNumber TrainType MaxSpeedKmph TrainComposition Flags : StationVisit1 StationVisit2 ...
+#
+# StationVisit format:
+# StationReference#PlatformNumber#From#DurationMinutes
+#
+# TrainType format:
+# COMMUTER | FREIGHT | IC | URBAN
+#
+# TrainComposition format:
+# vvv...
+# Each v represents one vehicle. L = locomotive (or control post), C = cargo car, P = passenger car
+#
+# Flags format:
+# ff
+# Each f is one flag. 0 = flag not set, 1 = flag set, X = position not used
+# Flag positions:
+# #1 unused (X)
+# #2 NoBrakingPenalization - if set (1), train does NOT receive penalization when braking at signals
+#

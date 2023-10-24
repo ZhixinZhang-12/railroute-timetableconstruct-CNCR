@@ -1,0 +1,58 @@
++++stations
+# For reference, ignored during import
+# Format: 
+# StationReference = Name | MayBeInitial | Platforms
+#
+# a = 花山南站 | 1 | 1, 2 
+# b = 武九客专武汉方向 | 1 | 2, 1 
+# c = 余花联络线武汉东方向 | 1 | 2, 1 
+# d = 左岭站 | 1 | 1, 2 
+# e = 葛店南站 | 1 | 6, 4, 2, 5, 3, 1 
+# f = 武冈城际黄冈方向 | 1 | 1, 2 
+# g = 武九客专鄂州方向 | 1 | 1, 2 
+
++++timetable
+# Format: 
+# ReportingNumber TrainType MaxSpeedKmph TrainComposition Flags : StationVisit1 StationVisit2 ...
+#
+# StationVisit format:
+# StationReference#PlatformNumber#From#DurationMinutes
+#
+# TrainType format:
+# COMMUTER | FREIGHT | IC | URBAN
+#
+# TrainComposition format:
+# vvv...
+# Each v represents one vehicle. L = locomotive (or control post), C = cargo car, P = passenger car
+#
+# Flags format:
+# ff
+# Each f is one flag. 0 = flag not set, 1 = flag set, X = position not used
+# Flag positions:
+# #1 unused (X)
+# #2 NoBrakingPenalization - if set (1), train does NOT receive penalization when braking at signals
+#
+C5602 COMMUTER 200 LPPL X1 : f#2#07:18:00#0 e#4#07:23:00#2 b#1#07:45:00#0 
+D5770 COMMUTER 200 LPPL X1 : g#2#07:48:00#0 e#2#07:53:00#2 c#1#08:15:00#0 
+D5782 COMMUTER 200 LPPL X1 : f#2#08:18:00#0 e#4#08:23:00#2 b#1#08:45:00#0 
+D5762 COMMUTER 200 LPPL X1 : f#2#08:52:00#0 e#6#08:57:00#2 c#1#09:19:00#0 
+D2181 COMMUTER 200 LPPL X1 : b#1#10:22:00#0 e#3#10:42:00#2 f#2#10:49:00#0 
+D3287 COMMUTER 200 LPPL X1 : b#1#10:46:00#0 e#5#11:06:00#2 g#2#11:13:00#0 
+D5742 COMMUTER 200 LPPL X1 : f#2#11:25:00#0 e#6#11:30:00#2 c#1#11:52:00#0 
+D5852 COMMUTER 200 LPPL X1 : g#2#12:01:00#0 e#2#12:06:00#2 b#1#12:28:00#0 
+G2387 COMMUTER 300 LPPL X1 : b#1#12:37:00#0 e#5#12:57:00#6 g#2#13:08:00#0 
+D5765 COMMUTER 200 LPPL X1 : c#1#12:50:00#0 e#5#13:10:00#2 g#2#13:17:00#0 
+D5853 COMMUTER 200 LPPL X1 : b#1#12:55:00#0 e#1#13:15:00#2 f#2#13:22:00#0 
+D3273 COMMUTER 200 LPPL X1 : c#1#13:03:00#0 e#1#13:23:00#2 g#2#13:30:00#0 
+C5626 COMMUTER 200 LPPL X1 : f#2#13:24:00#0 e#4#13:29:00#2 b#1#13:51:00#0 
+D5881 COMMUTER 200 LPPL X1 : c#1#13:21:00#0 e#5#13:41:00#2 g#2#13:48:00#0 
+G2388 COMMUTER 300 LPPL X1 : g#2#13:38:00#0 e#4#13:43:00#2 b#1#14:05:00#0 
+D2182 COMMUTER 200 LPPL X1 : f#2#13:49:00#0 e#4#13:54:00#3 b#1#14:17:00#0 
+G2046 COMMUTER 300 LPPL X1 : g#2#14:42:00#0 e#4#14:47:00#2 b#1#15:09:00#0 
+G2294 COMMUTER 300 LPPL X1 : g#2#15:01:00#0 e#4#15:06:00#3 b#1#15:29:00#0 
+G2712 COMMUTER 300 LPPL X1 : g#2#15:43:00#0 e#2#15:48:00#2 b#1#16:10:00#0 
+D3274 COMMUTER 200 LPPL X1 : g#2#15:51:00#0 e#2#15:56:00#2 c#1#16:18:00#0 
+D5855 COMMUTER 200 LPPL X1 : b#1#16:15:00#0 e#1#16:35:00#2 f#2#16:42:00#0 
+D3251 COMMUTER 200 LPPL X1 : b#1#17:02:00#0 e#1#17:22:00#2 g#2#17:29:00#0 
+D5856 COMMUTER 200 LPPL X1 : f#2#17:17:00#0 e#4#17:22:00#2 b#1#17:44:00#0 
+D3223 COMMUTER 200 LPPL X1 : b#1#17:24:00#0 e#1#17:44:00#2 g#2#17:51:00#0 
