@@ -138,4 +138,119 @@ Data acquisition completed.
 2024-03-29 08:31:58.926 宜昌东站.py[186] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.004s[08:31:58.922718 - 08:31:58.926310]
 2024-03-29 08:31:59.422 宜昌东站.py[186] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.003s[08:31:59.419185 - 08:31:59.422105]
 2024-03-29 08:31:59.423 宜昌东站.py[186] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
-2024-03-29 08:32:01.221 宜昌东站.py[188] __del__ -> {
+2024-03-29 08:32:01.221 宜昌东站.py[188] __del__ -> {2024-03-31 12:25:52.116 武昌站.py[131] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 2.825s[12:25:49.291659 - 12:25:52.116153]
+2024-03-31 12:25:52.739 武昌站.py[141] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.119s[12:25:52.620136 - 12:25:52.739305]
+2024-03-31 12:25:53.496 武昌站.py[146] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.042s[12:25:53.455788 - 12:25:53.496998]
+2024-03-31 12:25:53.575 武昌站.py[152] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.075s[12:25:53.500244 - 12:25:53.575169]
+2024-03-31 12:25:55.568 武昌站.py[165] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.243s[12:25:55.325887 - 12:25:55.568257]
+2024-03-31 12:25:56.196 武昌站.py[177] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.356s[12:25:55.841361 - 12:25:56.196495]
+2024-03-31 12:25:57.172 武昌站.py[189] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[12:25:57.161337 - 12:25:57.171634]
+Data acquisition completed.
+2024-03-31 12:26:20.900 武昌站.py[206] __del__ -> {2024-03-31 12:27:44.298 武昌站.py[130] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.579s[12:27:42.719371 - 12:27:44.298101]
+2024-03-31 12:27:44.892 武昌站.py[140] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.092s[12:27:44.801052 - 12:27:44.892215]
+2024-03-31 12:27:46.026 武昌站.py[145] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.038s[12:27:45.988004 - 12:27:46.026238]
+2024-03-31 12:27:46.093 武昌站.py[151] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.067s[12:27:46.027214 - 12:27:46.093345]
+2024-03-31 12:27:48.024 武昌站.py[164] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.165s[12:27:47.860260 - 12:27:48.024092]
+2024-03-31 12:27:48.636 武昌站.py[176] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.343s[12:27:48.294234 - 12:27:48.636621]
+2024-03-31 12:27:49.595 武昌站.py[188] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.009s[12:27:49.586125 - 12:27:49.595161]
+2024-03-31 12:28:06.723 武昌站.py[195] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.171s[12:28:06.552509 - 12:28:06.723835]
+Data acquisition completed.
+2024-03-31 12:28:21.333 武昌站.py[205] __del__ -> {2024-03-31 12:34:41.914 武昌站.py[135] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.591s[12:34:40.323110 - 12:34:41.914311]
+2024-03-31 12:34:42.508 武昌站.py[145] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.092s[12:34:42.417242 - 12:34:42.508909]
+2024-03-31 12:34:43.629 武昌站.py[150] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.036s[12:34:43.593708 - 12:34:43.629956]
+2024-03-31 12:34:43.696 武昌站.py[156] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.066s[12:34:43.630932 - 12:34:43.696585]
+2024-03-31 12:34:45.618 武昌站.py[169] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.168s[12:34:45.451008 - 12:34:45.618214]
+2024-03-31 12:34:46.242 武昌站.py[181] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.345s[12:34:45.898535 - 12:34:46.242916]
+2024-03-31 12:34:47.201 武昌站.py[193] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[12:34:47.191901 - 12:34:47.201877]
+2024-03-31 12:35:04.295 武昌站.py[200] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.168s[12:35:04.126374 - 12:35:04.295326]
+2024-03-31 12:37:49.341 武昌站.py[200] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-03-31 12:38:06.636 武昌站.py[200] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-03-31 15:54:44.023 武昌站.py[136] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.824s[15:54:42.197801 - 15:54:44.022028]
+2024-03-31 15:54:44.711 武昌站.py[146] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.181s[15:54:44.530805 - 15:54:44.711549]
+2024-03-31 15:54:45.880 武昌站.py[151] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.061s[15:54:45.819327 - 15:54:45.879883]
+2024-03-31 15:54:46.008 武昌站.py[157] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.124s[15:54:45.885162 - 15:54:46.008251]
+2024-03-31 15:54:48.767 武昌站.py[170] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.259s[15:54:48.508560 - 15:54:48.767641]
+2024-03-31 15:54:49.864 武昌站.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.719s[15:54:49.146178 - 15:54:49.864483]
+2024-03-31 15:54:51.299 武昌站.py[194] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.018s[15:54:51.281122 - 15:54:51.299072]
+2024-03-31 15:55:16.694 武昌站.py[201] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.286s[15:55:16.407599 - 15:55:16.694345]
+2024-03-31 15:59:20.602 武昌站.py[201] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-03-31 15:59:46.331 武昌站.py[201] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-03-31 16:00:12.120 武昌站.py[201] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-03-31 16:00:12.128 武昌站.py[210] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.007s[16:00:12.121932 - 16:00:12.128908]
+2024-03-31 16:00:12.653 武昌站.py[210] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.012s[16:00:12.641828 - 16:00:12.653744]
+2024-03-31 16:00:13.135 武昌站.py[210] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.010s[16:00:13.125424 - 16:00:13.134750]
+2024-03-31 16:00:13.136 武昌站.py[210] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-03-31 16:00:14.701 武昌站.py[212] __del__ -> {2024-04-03 20:51:42.215 麻城站.py[83] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.373s[20:51:40.841830 - 20:51:42.215053]
+2024-04-03 20:51:42.832 麻城站.py[93] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.105s[20:51:42.728346 - 20:51:42.832474]
+2024-04-03 20:51:43.669 麻城站.py[98] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.037s[20:51:43.632940 - 20:51:43.669891]
+2024-04-03 20:51:43.736 麻城站.py[104] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.064s[20:51:43.672617 - 20:51:43.736605]
+2024-04-03 20:51:45.809 麻城站.py[117] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[20:51:45.796922 - 20:51:45.809413]
+2024-04-03 20:51:46.347 麻城站.py[129] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.178s[20:51:46.170262 - 20:51:46.347733]
+2024-04-03 20:51:47.703 麻城站.py[141] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[20:51:47.693920 - 20:51:47.703873]
+Data acquisition completed.
+2024-04-03 20:52:04.080 麻城站.py[158] __del__ -> {2024-04-03 20:55:37.545 麻城站.py[83] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.335s[20:55:36.209777 - 20:55:37.545014]
+2024-04-03 20:55:38.147 麻城站.py[93] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.101s[20:55:38.047535 - 20:55:38.147928]
+2024-04-03 20:55:38.991 麻城站.py[98] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.041s[20:55:38.950977 - 20:55:38.991408]
+2024-04-03 20:55:39.061 麻城站.py[104] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.069s[20:55:38.992406 - 20:55:39.061563]
+2024-04-03 20:55:41.365 麻城站.py[117] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.246s[20:55:41.119060 - 20:55:41.365182]
+2024-04-03 20:55:41.867 麻城站.py[129] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.139s[20:55:41.728785 - 20:55:41.867464]
+2024-04-03 20:55:43.221 麻城站.py[141] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.015s[20:55:43.207207 - 20:55:43.221952]
+Data acquisition completed.
+2024-04-03 20:56:10.300 麻城站.py[158] __del__ -> {2024-04-03 20:59:24.722 麻城站.py[84] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.063s[20:59:24.660223 - 20:59:24.722323]
+2024-04-03 20:59:25.447 麻城站.py[94] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 24, SearchTime: 0.214s[20:59:25.234647 - 20:59:25.447961]
+2024-04-03 20:59:26.448 麻城站.py[99] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.046s[20:59:26.402727 - 20:59:26.448228]
+2024-04-03 20:59:26.515 麻城站.py[105] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.066s[20:59:26.450221 - 20:59:26.515167]
+2024-04-03 20:59:28.810 麻城站.py[118] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 9, SearchTime: 0.246s[20:59:28.564763 - 20:59:28.810275]
+2024-04-03 20:59:29.402 麻城站.py[130] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 11, SearchTime: 0.229s[20:59:29.173718 - 20:59:29.402111]
+2024-04-03 20:59:30.737 麻城站.py[142] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[20:59:30.726398 - 20:59:30.737390]
+Data acquisition completed.
+2024-04-03 20:59:54.920 麻城站.py[158] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.070s[20:59:54.849779 - 20:59:54.920372]
+2024-04-03 21:00:06.045 麻城站.py[159] __del__ -> {2024-04-03 21:00:44.690 麻城站.py[84] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.213s[21:00:43.477856 - 21:00:44.690067]
+2024-04-03 21:00:45.291 麻城站.py[94] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.091s[21:00:45.201070 - 21:00:45.291740]
+2024-04-03 21:00:46.253 麻城站.py[99] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.040s[21:00:46.213425 - 21:00:46.253601]
+2024-04-03 21:00:46.324 麻城站.py[105] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.070s[21:00:46.253601 - 21:00:46.324095]
+2024-04-03 21:00:48.680 麻城站.py[118] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.293s[21:00:48.387746 - 21:00:48.680395]
+2024-04-03 21:00:49.186 麻城站.py[130] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.129s[21:00:49.057549 - 21:00:49.186466]
+2024-04-03 21:00:50.515 麻城站.py[142] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[21:00:50.506075 - 21:00:50.515089]
+2024-04-03 21:01:15.609 麻城站.py[149] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.165s[21:01:15.445032 - 21:01:15.609409]
+2024-04-03 21:02:36.298 麻城站.py[149] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-04-03 21:03:01.945 麻城站.py[149] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-04-03 21:03:27.483 麻城站.py[149] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-04-03 21:03:27.488 麻城站.py[158] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.004s[21:03:27.485485 - 21:03:27.488478]
+2024-04-03 21:03:28.000 麻城站.py[158] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.005s[21:03:27.996403 - 21:03:28.000901]
+2024-04-03 21:03:28.499 麻城站.py[158] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.006s[21:03:28.493919 - 21:03:28.499436]
+2024-04-03 21:03:28.500 麻城站.py[158] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-04-03 21:03:30.151 麻城站.py[160] __del__ -> {2024-04-03 21:09:01.481 麻城站.py[85] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.267s[21:09:00.214150 - 21:09:01.481465]
+2024-04-03 21:09:02.096 麻城站.py[95] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.100s[21:09:01.997610 - 21:09:02.096927]
+2024-04-03 21:09:03.172 麻城站.py[100] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.037s[21:09:03.135645 - 21:09:03.172270]
+2024-04-03 21:09:03.241 麻城站.py[106] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.068s[21:09:03.173267 - 21:09:03.241895]
+2024-04-03 21:09:05.500 麻城站.py[119] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.226s[21:09:05.274320 - 21:09:05.500231]
+2024-04-03 21:09:06.052 麻城站.py[131] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.187s[21:09:05.865977 - 21:09:06.052960]
+2024-04-03 21:09:07.392 麻城站.py[143] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[21:09:07.381253 - 21:09:07.392743]
+2024-04-03 21:09:32.511 麻城站.py[150] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.184s[21:09:32.327901 - 21:09:32.511212]
+2024-04-03 21:10:53.173 麻城站.py[150] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-04-03 21:11:18.731 麻城站.py[150] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-04-03 21:11:18.736 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.004s[21:11:18.731931 - 21:11:18.736925]
+2024-04-03 21:11:19.247 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.006s[21:11:19.242007 - 21:11:19.247967]
+2024-04-03 21:11:19.740 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.005s[21:11:19.736075 - 21:11:19.740572]
+2024-04-03 21:11:19.741 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-04-03 21:11:21.409 麻城站.py[161] __del__ -> {2024-04-03 21:24:21.088 麻城站.py[85] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 1.223s[21:24:19.864223 - 21:24:21.087987]
+2024-04-03 21:24:21.689 麻城站.py[95] initsetting -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.089s[21:24:21.601481 - 21:24:21.689523]
+2024-04-03 21:24:22.862 麻城站.py[100] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 19, SearchTime: 0.036s[21:24:22.827373 - 21:24:22.862294]
+2024-04-03 21:24:22.928 麻城站.py[106] initsetting -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 40, SearchTime: 0.064s[21:24:22.864289 - 21:24:22.928179]
+2024-04-03 21:24:25.228 麻城站.py[119] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.245s[21:24:24.983436 - 21:24:25.227303]
+2024-04-03 21:24:25.721 麻城站.py[131] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.129s[21:24:25.592037 - 21:24:25.720617]
+2024-04-03 21:24:27.048 麻城站.py[143] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[21:24:27.038001 - 21:24:27.048599]
+2024-04-03 21:24:52.248 麻城站.py[150] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 51, SearchTime: 0.158s[21:24:52.090714 - 21:24:52.248386]
+2024-04-03 21:26:13.111 麻城站.py[150] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-04-03 21:26:38.678 麻城站.py[150] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-04-03 21:26:38.683 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.004s[21:26:38.679636 - 21:26:38.683632]
+2024-04-03 21:26:39.197 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.005s[21:26:39.192242 - 21:26:39.197234]
+2024-04-03 21:26:39.693 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.005s[21:26:39.689205 - 21:26:39.693788]
+2024-04-03 21:26:39.694 麻城站.py[159] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-04-03 21:26:41.351 麻城站.py[161] __del__ -> {
