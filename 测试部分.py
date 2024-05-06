@@ -112,63 +112,78 @@ route12 = {'应城': ['汉西联络线', "汉西站", "汉阳站"], '天门': ['
 # m = 横店东 | 1 |
 
 s0 = "D2271/D2274 COMMUTER 250 LLPPPPLL X1 : b#2#14:51:00#0 a#15#14:55:00#14 c#2#15:12:00#0"
+hsShiyan = ["汉十高速十堰东方向"]
+hsHankou = ["汉十高速汉口方向"]
+zyShennongjia = ["郑渝高速神农架方向", "东津线路所"]
+zyZhengzhou = ["郑渝高速郑州东方向"]
+
+# 综和可能的进路，产生股道，做较为准确的映射,主要车站的tuple是随机映射站台用的
+entrance12 = {
+    (*hsHankou, "襄阳东", *hsShiyan[::-1]): [1, (6, 8), 1],
+    (*hsHankou, "襄阳东", *zyZhengzhou[::-1]): [1, (9, 10), 2],
+    (*hsHankou, "襄阳东", *zyShennongjia[::-1]): [1, (6, 8), 5, 1],
+    (*hsHankou, "襄阳东", "动车所"): [1, (6, 8), 0],
 
 
-def processed2nd(s0: str):
-    s1 = s0.split(sep=" : ")
+    (*hsShiyan, "襄阳东", *hsHankou[::-1]): [2, (1, 3), 2],
+    (*hsShiyan, "襄阳东", *zyZhengzhou[::-1]): [2, (9, 9), 2],
 
-    s2 = s1[1].split(sep=" ")
-    s00 = []
-    mid1 = ""
-    for i in range(0, 3):
-        l1 = s2[i].split(sep="#")
-        time0 = datetime.datetime.strptime(l1[2], "%H:%M:%S")
-        if i == 0:
-            time1 = time0+datetime.timedelta(minutes=1)
-            if l1[0] == "c":
-                mid1 = "m#3#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "g":
-                mid1 = "m#3#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "b":
-                mid1 = "o#2#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "h":
-                mid1 = "o#4#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "e":
-                mid1 = "l#4#{}#0".format(time1.strftime("%H:%M:%S"))
-            else:
-                mid1 = ""
-            s00.append(s2[i])
-            s00.append(mid1)
-        elif i == 1:
-            s00.append(s2[i])
-        elif i == 2:
-            time1 = time0-datetime.timedelta(minutes=1)
-            if l1[0] == "c":
-                mid1 = "m#4#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "g":
-                mid1 = "m#4#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "b":
-                mid1 = "o#3#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "h":
-                mid1 = "o#1#{}#0".format(time1.strftime("%H:%M:%S"))
-            elif l1[0] == "e":
-                mid1 = "l#3#{}#0".format(time1.strftime("%H:%M:%S"))
-            else:
-                mid1 = ""
-            s00.append(mid1)
-            s00.append(s2[i])
+    (*zyZhengzhou, "襄阳东", *hsShiyan[::-1]): [1, (9, 9), 1],
+    (*zyZhengzhou, "襄阳东", *hsHankou[::-1]): [1, (9, 10), 2],
+    (*zyZhengzhou, "襄阳东", *zyShennongjia[::-1]): [1, (14, 20), 4, 1],
+    (*zyZhengzhou, "襄阳东", "动车所"): [1, (14, 20), 0],
 
-    sfinal = s1[0]+" : "+" ".join(s00)
-    return sfinal
+    (*zyShennongjia, "襄阳东", *zyZhengzhou[::-1]): [2, 3, (10, 11), 1],
+    (*zyShennongjia, "襄阳东", *hsHankou[::-1]): [2, 2, (1, 3), 2],
+    (*zyShennongjia, "襄阳东",   "动车所"): [2, 3, (14, 20), 0],
+
+    ("动车所", "襄阳东", *zyShennongjia[::-1]): [3, (14, 20), 4, 1],
+    ("动车所", "襄阳东", *zyZhengzhou[::-1]): [2, (14, 20), 2],
+    ("动车所", "襄阳东", *hsShiyan[::-1]): [1, (1, 3), 1],
+    ("动车所", "襄阳东", *hsHankou[::-1]): [2, (6, 8), 2],
 
 
-f1 = open(file="t2.txt", mode="r", encoding="utf8")
-f2 = open(file="t3.txt", mode="w", encoding="utf8")
-listori = f1.readlines()
-for lo in listori:
-    res1 = processed2nd(lo)
-    f2.write(res1+"\n")
+}
+
+print(entrance12)
+'''
+# 线路和车站关系，主要用于从车站-值获取线路-键
+route12 = {"潢川": ["京九线阜阳方向"], "光山": ["京九线阜阳方向"], "阜阳": ["京九线阜阳方向"], "商丘南": ["京九线阜阳方向"], "商丘": ["京九线阜阳方向"],
+           "新县": ["京九线阜阳方向"],
+           "黄州": ["京九线九江方向"], "武穴": ["京九线九江方向"], "九江": ["京九线九江方向"], "庐山": ["京九线九江方向"], "南昌": ["京九线九江方向"],
+           "蕲春": ["京九线九江方向"], "赣州": ["京九线九江方向"], "浠水": ["京九线九江方向"], "吉安": ["京九线九江方向"],
+           "武昌": ["麻武线武昌方向"], "信阳": ["麻武线武昌方向"],
+           '麻城': ['麻城站货场']}
+
+route1Default = ["麻城站货场"]  # 找不到的默认设置
+
+# 综和可能的进路，产生股道，做较为准确的映射,主要车站的tuple是随机映射站台用的
+entrance12 = {
+    ("京九线阜阳方向", "麻城", "京九线九江方向"): [1, (1, 3), 1],
+    ("京九线阜阳方向", "麻城", "麻武线武昌方向"): [1, (1, 3), 1],
 
 
-f1.close()
-f2.close()
+    ("京九线九江方向", "麻城", "京九线阜阳方向"): [2, (4, 5), 2],
+    ("京九线九江方向", "麻城", "麻武线武昌方向"): [2, (4, 5), 1],
+
+    ("麻武线武昌方向", "麻城", "京九线阜阳方向"): [1, (4, 5), 2],
+    ("麻武线武昌方向", "麻城", "京九线九江方向"): [1, (1, 3), 1],
+
+    ("京九线九江方向", "麻城", "麻城"): [1, (1, 1), 1],
+
+
+}
+# a = 襄阳东站 | 1 | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 
+# b = 汉十高速丹江口十堰东方向 | 1 | 1, 2 
+# c = 汉十高速孝感东汉口方向 | 1 | 1, 2 
+# d = 郑渝高速南阳东郑州东方向 | 1 | 1, 2 
+# e = 郑渝高速神农架重庆北方向 | 1 | 1, 2 
+# f = 襄阳东动车所 | 1 | 1, 2, 3 
+# g = 襄荆高速荆门东荆州方向(在建) | 1 | 1, 2 
+# h = 东津线路所 | 1 | 1, 2, 3, 4, 5, 6 
+221|221 COMMUTER 120 LPPPL X1 : c#0#08:00:00#0 a#9#08:05:00#1 d#0#08:11:00#0
+537|537 COMMUTER 120 LPPPL X1 : e#0#08:00:00#0 h#2#08:02:00#0 f#1#08:07:00#1 a#0#08:13:00#0
+611|611 COMMUTER 120 LPPPL X1 : d#1#08:00:00#0 a#14#08:05:00#1 h#4#08:10:00#0 e#1#08:12:00#0
+620|620 COMMUTER 120 LPPPL X1 : b#2#08:00:00#0 a#3#08:05:00#1 c#2#08:11:00#0
+
+'''
