@@ -9,13 +9,27 @@ import numpy
 import pandas
 import random
 import requests
-
-'''
-
-
-'''
-
+# a = 沪汉蓉快速客运铁路汉口方向 | 1 | 1, 2
+# b = 京广高速铁路武汉方向 | 1 | 1, 2
+# c = 横店东站 | 1 | 1, 2, 3, 4
+# d = 红安西站 | 1 | 7, 4, 3, 6, 5, 1, 2, 8
+# e = 麻城北站 | 1 | 1, 2, 3, 4, 5, 6, 7, 8
+# g = 沪汉蓉快速客运铁路六安/合肥南方向 | 1 | 2, 1
+# h = 宋埠站 | 1 | 1, 2, 3
+# i = 中驿站 | 1 | 3, 2, 1, 4
+# j = 甘露山站 | 1 | 1, 2, 3
+# k = 黄陂站 | 1 | 1, 2, 3, 4
+# l = 横麻铁路武昌北/武昌方向 | 1 | 1
+# m = 长江新区站 | 1 |
+# n = 麻城站 | 1 | 1, 2, 3, 4, 5
+# o = 沪渝蓉高速铁路武汉天河方向 | 1 | 1, 2
+# p = 京九铁路九江/南昌方向 | 1 | 1, 2
+# q = 京九铁路阜阳/商丘方向 | 1 | 1, 2
+# r = 沪渝蓉高速铁路六安北/合肥南方向 | 1 | 1, 2
+# s = 京广高速铁路孝感北/郑州东方向 | 1 | 1, 2
 # 速度和编组以及类型映射关系,0为普速1为动车2为高速，后续修改
+lltskbroute = "lltskb\\lltskb.exe"
+
 species1 = {'K': ['120', 'LCPPPPPPPP', "0"], 'T': ['140', 'LCPPPPPPPP', "0"], 'Z': ['160', 'LCPPPPPPPP', "0"],
             'D': ['250', 'LPPLLPPL', "1"], 'C': ['200', 'LPPL', "1"], 'G': ['350', 'LPLPPLPL', "2"]}
 species1default = ['120', 'LCPPPPPPPP', "0"]
@@ -24,68 +38,54 @@ marshalling = {"": ""}
 
 
 # 车站-编号,进场立场股道,用时
-# [车站编号,车站所在侧(0为左侧),车辆进场股道,车辆离场行走股道,到达中心车站所用时间]
+# [车站编号,车辆进场股道,车辆离场行走股道,到达中心车站所用时间]
 # 对于股道，若为边界进出场车站股道为进场立场行走股道编号，若为越行站则为对应正线、越行线编号
-gameStationInfo = {'襄阳东': ['a', 0, 0, 0],
-                   '汉十高速十堰东方向': ['b', 2, 1, 6], '汉十高速汉口方向': ['c', 1, 2, 6],
-                   '郑渝高速郑州东方向': ['d', 1, 2, 6], '郑渝高速神农架方向': ['e', 2, 1, 6],
-                   '动车所': ['f', 0, 0, 20],
-                   '东津线路所': ['h', 0, 0, 6], '襄荆高速荆门东方向': ['g', 0, 0, 20],
+gameStationInfo = {'汉口': ['a', (2, 2), (1, 1), 10],
+                   '武汉': ['b', (2, 2), (1, 1), 10], '横店东': ['c', (0, 0), (0, 0), 10],
+                   '红安西': ['d', (1, 1), (2, 2), 10], '麻城北': ['e', (1, 2), (3, 4), 10],
+                   '合肥南': ['g', (1, 1), (2, 2), 20], '合肥': ['g', (1, 1), (2, 2), 20],
+
 
                    }
-gameStationDefault = ['g',  0, 0, 20]  # 找不到的默认设置
+gameStationDefault = ['o',  0, 0, 20]  # 找不到的默认设置
 # g = 襄荆高速荆门东荆州方向(在建) | 1 | 1, 2
 
-hsShiyan = ["汉十高速十堰东方向"]
-hsHankou = ["汉十高速汉口方向"]
-zyShennongjia = ["郑渝高速神农架方向", "东津线路所"]
-zyZhengzhou = ["郑渝高速郑州东方向"]
-# 线路和车站关系，主要用于从车站-值获取线路-键
-route12 = {"十堰东": hsShiyan, "武当山西": hsShiyan, "丹江口": hsShiyan, "谷城北": hsShiyan,
+# 提取出车站部分以减少打字量
+hrHankou = ["汉口"]
+jgWuhan = ["武汉"]
+hrhefei = ["合肥南"]
+hwdetourhefei = ["合肥"]
+sectionList0 = ["汉口", "汉川", "天门南", "仙桃西", "潜江", "荆州", "枝江北", "宜昌东"]
 
-           "枣阳": hsHankou, "随县": hsHankou, "随州南": hsHankou, "安陆西": hsHankou,
-           "云梦东": hsHankou, "孝感东": hsHankou, "汉口": hsHankou,
+sectionList1 = ["红安西", "麻城北"]
 
-           "南漳": zyShennongjia, "保康县": zyShennongjia, "神农架": zyShennongjia, "巴东": zyShennongjia,
-           "奉节": zyShennongjia, "万州北": zyShennongjia, "重庆北": zyShennongjia,
 
-           "邓州东": zyZhengzhou, "南阳东": zyZhengzhou, "平顶山西": zyZhengzhou, "长葛北": zyZhengzhou,
-           "郑州航空港": zyZhengzhou, "郑州东": zyZhengzhou,
+# 单个车站时使用，线路和车站关系，主要用于从车站-值获取线路-键
+route12 = {"汉口": hrHankou, "合肥南": hrhefei}
+route1Default = ["汉口"]  # 找不到的默认设置
 
-           "襄阳东": ["动车所"]
-           }
 
-route1Default = ["襄荆高速荆门东方向"]  # 找不到的默认设置
-
-# 综和可能的进路，产生股道，做较为准确的映射,主要车站的tuple是随机映射站台用的
+# 单个车站使用，综和可能的进路，产生股道，做较为准确的映射,主要车站的tuple是随机映射站台用的
 entrance12 = {
-    (*hsHankou, "襄阳东", *hsShiyan[::-1]): [1, (6, 8), 1],
-    (*hsHankou, "襄阳东", *zyZhengzhou[::-1]): [1, (9, 10), 2],
-    (*hsHankou, "襄阳东", *zyShennongjia[::-1]): [1, (6, 8), 5, 1],
-    (*hsHankou, "襄阳东", "动车所"): [1, (6, 8), 0],
+    (*hrHankou, *sectionList1, *hrhefei[::-1]): [2,  (1, 1), (1, 2), 2],
+    (*jgWuhan, *sectionList1, *hrhefei[::-1]): [2,  (1, 1), (1, 2), 2],
+    (*hrHankou, *sectionList1, *hwdetourhefei[::-1]): [2,  (1, 1), (1, 2), 2],
+    (*jgWuhan, *sectionList1, *hwdetourhefei[::-1]): [2,  (1, 1), (1, 2), 2],
 
-
-    (*hsShiyan, "襄阳东", *hsHankou[::-1]): [2, (1, 3), 2],
-    (*hsShiyan, "襄阳东", *zyZhengzhou[::-1]): [2, (9, 9), 2],
-
-    (*zyZhengzhou, "襄阳东", *hsShiyan[::-1]): [1, (9, 9), 1],
-    (*zyZhengzhou, "襄阳东", *hsHankou[::-1]): [1, (9, 10), 2],
-    (*zyZhengzhou, "襄阳东", *zyShennongjia[::-1]): [1, (14, 20), 4, 1],
-    (*zyZhengzhou, "襄阳东", "动车所"): [1, (14, 20), 0],
-
-    (*zyShennongjia, "襄阳东", *zyZhengzhou[::-1]): [2, 3, (10, 11), 1],
-    (*zyShennongjia, "襄阳东", *hsHankou[::-1]): [2, 2, (1, 3), 2],
-    (*zyShennongjia, "襄阳东",   "动车所"): [2, 3, (14, 20), 0],
-
-    ("动车所", "襄阳东", *zyShennongjia[::-1]): [3, (14, 20), 4, 1],
-    ("动车所", "襄阳东", *zyZhengzhou[::-1]): [2, (14, 20), 2],
-    ("动车所", "襄阳东", *hsShiyan[::-1]): [1, (1, 3), 1],
-    ("动车所", "襄阳东", *hsHankou[::-1]): [2, (6, 8), 2],
-
-
+    (*hrhefei, *sectionList1, *hrHankou[::-1]): [1,  (3, 4), (2, 2), 1],
+    (*hrhefei, *sectionList1, *jgWuhan[::-1]): [1,  (3, 4), (2, 2), 1],
+    (*hwdetourhefei, *sectionList1, *hrHankou[::-1]): [1,  (3, 4), (2, 2), 1],
+    (*hwdetourhefei, *sectionList1, *jgWuhan[::-1]): [1,  (3, 4), (2, 2), 1],
 }
 
 entrance1Default = (0, 0, 0, 0, 0, 0)
+
+# 单个线路时映射使用
+srcdst = ["合肥", "武汉"]  # .reverse()
+seq = 1
+# 可能的径路
+routeList = {"station": ["合肥南", "合肥", "麻城北", "红安西", "武汉", "汉口"],
+             "way": ["0", "0", "1", "1", "2", "2"], }
 
 
 class lltskbProcess(object):
@@ -118,20 +118,21 @@ class lltskbProcess(object):
             searchDepth=2, foundIndex=2, AutomationId="1001")
 
         # 返回值为0为未选中，返回值1为选中
-        isoperate = auto.CheckBoxControl(
+        self.isoperate = auto.CheckBoxControl(
             searchDepth=2, AutomationId="1024")  # 当日不开行
-        if isoperate.GetTogglePattern().ToggleState == 1:
-            isoperate.Click()  # 勾选以隐藏未开行车次
+        if self.isoperate.GetTogglePattern().ToggleState == 1:
+            self.isoperate.Click()  # 勾选以隐藏未开行车次
 
         # 返回值为0为未选中，返回值1为选中
-        isobscure = auto.CheckBoxControl(
+        self.isobscure = auto.CheckBoxControl(
             searchDepth=2, AutomationId="1025")  # 模糊车站
-        if isobscure.GetTogglePattern().ToggleState == 1:
-            isobscure.Click()  # 取消勾选以获得准确单个车站
 
         return
 
     def selectstation(self, station: str):  # 按照车站查询
+        # 车站查询使用精确查找，返回值为0为未选中，返回值1为选中
+        if self.isobscure.GetTogglePattern().ToggleState == 1:
+            self.isobscure.Click()  # 取消勾选以获得准确单个车站
 
         self.stationquery.Click()  # 点击以车站查询激活输入框
         self.stationquery.SendKeys('{Ctrl}a{Del}', waitTime=0.1)  # 全选清空内容
@@ -144,6 +145,10 @@ class lltskbProcess(object):
         return
 
     def selectzone(self, fromsation: str, tostation: str):  # 按照站站区间查询
+        # 区间查询采用模糊查找，返回值为0为未选中，返回值1为选中
+        if self.isobscure.GetTogglePattern().ToggleState == 0:
+            self.isobscure.Click()  # 取消勾选以获得准确单个车站
+
         self.fromquery.Click()  # 点击以激活区间始发站输入框
         self.fromquery.SendKeys('{Ctrl}a{Del}', waitTime=0.1)  # 全选清空内容
         self.fromquery.SendKeys(text=fromsation, waitTime=0.1)  # 输入需要查询的车站名称
@@ -199,15 +204,18 @@ class lltskbProcess(object):
 # 生产者进程函数
 
 
-def obtaintrain(lltroute: str, tc: int, srcstation: str, dststation: str, InfoQueue: Queue, trainCodeQueue: Queue):
+def obtaintrain(lltroute: str, tc: int, station: str | list[str], InfoQueue: Queue, trainCodeQueue: Queue):
     lltpro = lltskbProcess(
         lltskbroute=lltroute, traincount=tc)
     lltpro.initsetting()  # 处理获取时刻表信息
     # 第二个目标站置空则视为单一车站
-    if dststation == None or dststation == "":
-        lltpro.selectstation(station=srcstation)
-    else:  # 若不为空则为区间
-        lltpro.selectzone(fromsation=srcstation, tostation=dststation)
+    if type(station) == str:
+        lltpro.selectstation(station=station)
+    elif type(station) == list and len(station) == 2:  # 若不为空则为区间,且指定长度为2
+        lltpro.selectzone(fromsation=station[0], tostation=station[1])
+    else:
+        print("参数station:{0}不合法,类型为:{1},期望类型为单一字符串或是两个字符串组成列表".format(
+            station, type(station)))
     # 二者查询后续相同
     lltpro.generateroute(InfoQueue, trainCodeQueue)
 
@@ -289,15 +297,17 @@ def stationtrainFormat(station: str, InfoListList: list[list[str]], InfoListStr:
 # 对于按照区间查询的列车
 
 
-def sectiontrain(sectionstations: list, InfoListList: list[list[str]], InfoListStr: list[str]):
+def sectiontrainFormat(sectionstations: list, InfoListList: list[list[str]], InfoListStr: list[str]):
     # 区间内所有车站名称
-    sectionst = pandas.Series(data=sectionstations, name="station")
+    sectionst = pandas.DataFrame(
+        data=routeList, columns=["station", "way"])
     # 单一车次
     trainst = pandas.DataFrame(data=InfoListList, columns=[
-        "traincode", "station", "arrival", "departure", "entrance", "way"])
+        "traincode", "station", "arrival", "departure", "entrance", "drop0"])
+    trainst.drop(columns="drop0", inplace=True)
     # 合并二者
     sectionTrain = pandas.merge(
-        left=sectionst, right=trainst, how="left", on=["station"], suffixes=("", None))
+        left=sectionst, right=trainst, how="inner", on=["station"], suffixes=("", ""))
     return sectionTrain
 
 
@@ -312,19 +322,7 @@ def mapArrLeaTime(t1: pandas.Timestamp, st: str, mark: int) -> str:
     return res.strftime("%H:%M:%S")
 
 
-def mapEntrance0(st: str, way: int) -> int:
-    routeEntrance = gameStationInfo.get(st, gameStationDefault)
-    ent = 0
-    if way == 0:  # 进场股道映射
-        ent = routeEntrance[1]
-    elif way == 1:  # 停站股道映射，最后会使用其他函数
-        ent = 0
-    else:  # 离场股道映射
-        ent = routeEntrance[2]
-    return ent
-
-
-def mapEntrance1(df: pandas.DataFrame) -> list:
+def mapEntrance0(df: pandas.DataFrame) -> list:
     # 改为元组来作为key查找
     routekey = tuple(df["station"].to_list())
     waykey = df["way"].to_list()
@@ -345,6 +343,20 @@ def mapEntrance1(df: pandas.DataFrame) -> list:
     return entranceList
 
 
+def mapEntrance1(station: str, way: str, fromto=seq) -> int:
+    truckrange = gameStationInfo.get(station, gameStationDefault)
+    if way == "0":
+        idx = 1
+    elif way == "1" and fromto == 0:
+        idx = 1
+    elif way == "1" and fromto == 1:
+        idx = 2
+    elif way == "2":
+        idx = 2
+    res = random.randint(truckrange[idx][0], truckrange[idx][1])
+    return res
+
+
 def mapStationCode(st: str, traincode: str) -> str:
     stationCode = []
     try:
@@ -361,7 +373,7 @@ def mapStationCode(st: str, traincode: str) -> str:
 def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
 
     # 规整时间格式，改为时间戳以完成计算
-    centreStIdx = len(fullRoute2[0])
+
     traindf = pandas.DataFrame(data=fullRoute2, index=None, columns=[
         "traincode", "station", "arrival", "departure", "entrance", "way"])
 
@@ -374,23 +386,27 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
                            traindf["arrival"]).dt.total_seconds() / 60
     traindf["stoptime"] = traindf["stoptime"].apply(lambda x: int(x))
 
-    # 映射对应进场立场时间，同时转换为字符串
-    traindf["arrival"] = traindf.apply(lambda x: mapArrLeaTime(
-        t1=traindf.iloc[centreStIdx, 2], st=x["station"], mark=0), axis=1)  # type: ignore
-    traindf["departure"] = traindf.apply(lambda x: mapArrLeaTime(
-        t1=traindf.iloc[centreStIdx, 3], st=x["station"], mark=1), axis=1)  # type: ignore
-    # 对于非中心车站进行映射
-    # traindf["entrance"] = traindf.apply(
-    #     lambda x: mapEntrance0(st=x["station"], way=x["way"]), axis=1)
-    traindf["entrance"] = mapEntrance1(traindf)
-    # 映射车站为对应字母编号
+    if type(fullRoute2) == list:  # 传入列表即为单个车站的车次样式
+        centreStIdx = len(fullRoute2[0])
+        # 对于单一车站映射对应进场立场时间，同时转换为字符串
+        traindf["arrival"] = traindf.apply(lambda x: mapArrLeaTime(
+            t1=traindf.iloc[centreStIdx, 2], st=x["station"], mark=0), axis=1)  # type: ignore
+        traindf["departure"] = traindf.apply(lambda x: mapArrLeaTime(
+            t1=traindf.iloc[centreStIdx, 3], st=x["station"], mark=1), axis=1)  # type: ignore
+        # 对于非中心车站进行映射
+        traindf["entrance"] = mapEntrance0(traindf)
+    elif type(fullRoute2) == pandas.DataFrame:  # 其他即dataframe即为线路
+        # 对于简单区间映射对应进场立场时间，同时转换为字符串
+        traindf["arrival"] = traindf["arrival"].apply(
+            lambda x: x.strftime("%H:%M:%S"))  # type: ignore
+        traindf["departure"] = traindf["departure"].apply(
+            lambda x: x.strftime("%H:%M:%S"))  # type: ignore
+        traindf["entrance"] = traindf.apply(
+            lambda x: mapEntrance1(x["station"], x["way"]), axis="columns")
 
+    # 映射车站为对应字母编号
     traindf["station"] = traindf.apply(
         lambda x: mapStationCode(x["station"], x["traincode"]), axis=1)
-
-    # traingpdf = traindf.groupby(
-    #     by="traincode", as_index=False, sort=False).agg(list)
-    # dataframe--series--list,三级索引，
 
     return traindf
 #
@@ -407,15 +423,15 @@ def generateGameStr(infodf: pandas.DataFrame):
         tc=trcode, spe=typeInfo[0], mar=typeInfo[1])
     routeStrList = [trainStr]
     for row in infodf.itertuples(index=False):
-        if row.way == 0:
+        if row.way == "0":
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.arrival, stay=row.stoptime)
-        elif row.way == 1:
+                sta=row.station, rail=row.entrance, clck=row.arrival, stay=0)  # row.stoptime
+        elif row.way == "1":
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
                 sta=row.station, rail=row.entrance, clck=row.arrival, stay=row.stoptime)
         else:
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.departure, stay=row.stoptime)
+                sta=row.station, rail=row.entrance, clck=row.departure, stay=0)
         routeStrList.append(routeStr)
 
     ret = " ".join(routeStrList)
@@ -423,7 +439,7 @@ def generateGameStr(infodf: pandas.DataFrame):
     return ret
 
 
-def gameStrProcess(station, InfoQueueCons: Queue, trainCodeQueueCons: Queue, outfile: str):
+def gameStrProcess(station: str | list[str], InfoQueueCons: Queue, trainCodeQueueCons: Queue, outfile: str):
     # 消费者函数
     resset = set()
     while True:
@@ -439,9 +455,12 @@ def gameStrProcess(station, InfoQueueCons: Queue, trainCodeQueueCons: Queue, out
         initlistlist, initliststr = initStrFormate(
             initcodeStr=initcode, initInfoStr=initInfo)
 
-        initpr2 = stationtrainFormat(
-            station=station, InfoListList=initlistlist, InfoListStr=initliststr)
-
+        if type(station) == str:
+            initpr2 = stationtrainFormat(
+                station=station, InfoListList=initlistlist, InfoListStr=initliststr)
+        elif type(station) == list:
+            initpr2 = sectiontrainFormat(
+                sectionstations=station, InfoListList=initlistlist, InfoListStr=initliststr)
         nextpr2 = routeStrFormate(fullRoute2=initpr2)
         outstr = generateGameStr(nextpr2)
         resset.add(outstr)  # 加入最后文件
@@ -467,7 +486,7 @@ def strReproduct(file1: str, file2: str):
                 continue
     f.close()
     infolist.sort()
-    with open(file=file2, mode="w", encoding="utf-8") as w:
+    with open(file=file2, mode="a", encoding="utf-8") as w:
         for i in infolist:
             w.writelines(i)
     w.close()
@@ -479,18 +498,13 @@ if __name__ == "__main__":
     InfoQueue1 = multiprocessing.Queue()  # 径路信息队列
     trainCodeQueue1 = multiprocessing.Queue()  # 车次号队列
     # 中继承接队列
-    targetstation = "襄阳东"
-    lltskbroute = "lltskb\\lltskb.exe"
 
-    src0 = "宜昌东"
-    dst0 = "汉口"
-    sectionList = ["汉口", "天门南", "仙桃西", "潜江", "宜昌东"]
     # 生产者进程，中间的75为当前车站车次总数，约数即可
     p = multiprocessing.Process(
-        target=obtaintrain, args=(lltskbroute, 200, targetstation, InfoQueue1, trainCodeQueue1,))
+        target=obtaintrain, args=(lltskbroute, 80, srcdst, InfoQueue1, trainCodeQueue1,))
     # 消费者进程
     c = multiprocessing.Process(
-        target=gameStrProcess, args=(targetstation, InfoQueue1, trainCodeQueue1, "text2.txt"))
+        target=gameStrProcess, args=(srcdst, InfoQueue1, trainCodeQueue1, "text2.txt"))
 
     p.start()  # 启动生产者和消费者进程
     time.sleep(10)  # 启动较慢，等待生产者初始化完成
@@ -500,5 +514,5 @@ if __name__ == "__main__":
     InfoQueue1.put("114514")  # magic number,通知消费者所有产品已经生产完毕
     c.join()  # 等待消费者进程完成
 
-    strReproduct("text2.txt", "襄阳东.txt")  # 重整结果便于合并立折车次
+    strReproduct("text2.txt", "黄冈北部.txt")  # 重整结果便于合并立折车次
     ''''''

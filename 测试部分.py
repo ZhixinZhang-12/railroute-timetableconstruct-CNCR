@@ -3,7 +3,7 @@ import json
 import random
 import time
 import datetime
-
+import pandas
 
 def getTraincode():
     apiurl = "https://api.rail.re/train/G46"
@@ -144,8 +144,27 @@ entrance12 = {
 
 
 }
+InfoListList=[['D2195/D2198', '汉口', '06:43', '06:43', '0', '0'], ['D2195/D2198', '红安西', '07:12', '07:14', '72', '0'], ['D2195/D2198', '麻城北', '07:28', '07:30', '111', '0'], ['D2195/D2198', '金寨', '08:03', '08:05', '220', '0'], ['D2195/D2198', '六安', '08:22', '08:24', '272', '0'], ['D2195/D2198', '合肥南', '08:50', '08:54', '359', '0'], ['D2195/D2198', '南京南', '09:46', '09:50', '516', '0'], ['D2195/D2198', '宜兴', '10:28', '10:31', '645', '0'], ['D2195/D2198', '杭州东', '11:11', '11:15', '772', '0'], ['D2195/D2198', '余姚北', '11:49', '11:51', '878', '0'], ['D2195/D2198', '宁波', '12:15', '12:15', '92', '0']]
+routeList = {"station": ["武汉","汉口","红安西","麻城北","合肥南","合肥", ],
+             "way": [ "0", "0","1", "1","2", "2"],}
 
-print(entrance12)
+ # 区间内所有车站名称
+sectionst = pandas.DataFrame(
+    data=routeList, columns=["station", "way"])
+print(sectionst)
+
+# 单一车次
+trainst = pandas.DataFrame(data=InfoListList, columns=[
+    "traincode", "station", "arrival", "departure", "entrance", "drop0"])
+trainst.drop(columns="drop0", inplace=True)
+print(trainst)
+
+# 合并二者
+sectionTrain = pandas.merge(
+    left=sectionst, right=trainst, how="inner", on=["station"], suffixes=("", ""))
+print(sectionTrain)
+
+
 '''
 # 线路和车站关系，主要用于从车站-值获取线路-键
 route12 = {"潢川": ["京九线阜阳方向"], "光山": ["京九线阜阳方向"], "阜阳": ["京九线阜阳方向"], "商丘南": ["京九线阜阳方向"], "商丘": ["京九线阜阳方向"],
