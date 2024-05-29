@@ -40,10 +40,10 @@ marshalling = {"": ""}
 # 车站-编号,进场立场股道,用时
 # [车站编号,车辆进场股道,车辆离场行走股道,到达中心车站所用时间]
 # 对于股道，若为边界进出场车站股道为进场立场行走股道编号，若为越行站则为对应正线、越行线编号
-gameStationInfo = {'汉口': ['a', (2, 2), (1, 1), 10],
-                   '武汉': ['b', (2, 2), (1, 1), 10], '横店东': ['c', (0, 0), (0, 0), 10],
+gameStationInfo = {'汉口': ['a', (2, 2), (1, 1), 25],
+                   '武汉': ['b', (2, 2), (1, 1), 17], '横店东': ['c', (0, 0), (0, 0), 10],
                    '红安西': ['d', (1, 1), (2, 2), 10], '麻城北': ['e', (1, 2), (3, 4), 10],
-                   '合肥南': ['g', (1, 1), (2, 2), 20], '合肥': ['g', (1, 1), (2, 2), 20],
+                   '合肥南': ['g', (1, 1), (2, 2), 70], '合肥': ['g', (1, 1), (2, 2), 90],
 
 
                    }
@@ -218,6 +218,11 @@ def obtaintrain(lltroute: str, tc: int, station: str | list[str], InfoQueue: Que
             station, type(station)))
     # 二者查询后续相同
     lltpro.generateroute(InfoQueue, trainCodeQueue)
+
+    return
+
+
+def temporateTrainInfo():
 
     return
 
@@ -397,6 +402,19 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
         traindf["entrance"] = mapEntrance0(traindf)
     elif type(fullRoute2) == pandas.DataFrame:  # 其他即dataframe即为线路
         # 对于简单区间映射对应进场立场时间，同时转换为字符串
+        # 这部分需要额外修改加入进场时间和离场时间，即修改区间始末站点
+        # 修改进场时间
+        depuseTime = gameStationInfo.get(
+            traindf.at[0, "station"], gameStationDefault)[3]
+        traindf.at[0, "departure"] = traindf.at[0, "departure"] + \
+            datetime.timedelta(minutes=depuseTime)
+        # 修改离场时间，暂时不需要
+        # l = len(traindf)
+        # depuseTime = gameStationInfo.get(
+        #     traindf.at[l-1, "station"], gameStationDefault)[3]
+        # traindf.at[l-1, "arrival"] = traindf.at[l-1, "arrival"] - \
+        #     datetime.timedelta(minutes=depuseTime)
+        # 转换为字符串等
         traindf["arrival"] = traindf["arrival"].apply(
             lambda x: x.strftime("%H:%M:%S"))  # type: ignore
         traindf["departure"] = traindf["departure"].apply(
@@ -423,15 +441,15 @@ def generateGameStr(infodf: pandas.DataFrame):
         tc=trcode, spe=typeInfo[0], mar=typeInfo[1])
     routeStrList = [trainStr]
     for row in infodf.itertuples(index=False):
-        if row.way == "0":
+        if row.way == "0":  # 进场
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.arrival, stay=0)  # row.stoptime
-        elif row.way == "1":
+                sta=row.station, rail=row.entrance, clck=row.departure, stay=0)  # row.stoptime
+        elif row.way == "1":  # 停靠
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
                 sta=row.station, rail=row.entrance, clck=row.arrival, stay=row.stoptime)
-        else:
+        else:  # 立场
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.departure, stay=0)
+                sta=row.station, rail=row.entrance, clck=row.arrival, stay=0)
         routeStrList.append(routeStr)
 
     ret = " ".join(routeStrList)
@@ -500,6 +518,7 @@ if __name__ == "__main__":
     # 中继承接队列
 
     # 生产者进程，中间的75为当前车站车次总数，约数即可
+    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理 
     p = multiprocessing.Process(
         target=obtaintrain, args=(lltskbroute, 80, srcdst, InfoQueue1, trainCodeQueue1,))
     # 消费者进程

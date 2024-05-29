@@ -98,15 +98,14 @@ if __name__ == "__main__":
     InfoQueue1 = multiprocessing.Queue()  # 径路信息队列
     trainCodeQueue1 = multiprocessing.Queue()  # 车次号队列
     # 中继承接队列
-    targetstation = "麻城"
-    lltskbroute = "lltskb\\lltskb.exe"
 
     # 生产者进程，中间的75为当前车站车次总数，约数即可
+    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理 
     p = multiprocessing.Process(
-        target=obtaintrain, args=(lltskbroute, 75, targetstation, InfoQueue1, trainCodeQueue1,))
+        target=obtaintrain, args=(lltskbroute, 80, srcdst, InfoQueue1, trainCodeQueue1,))
     # 消费者进程
     c = multiprocessing.Process(
-        target=gameStrProcess, args=(targetstation, InfoQueue1, trainCodeQueue1, "text2.txt"))
+        target=gameStrProcess, args=(srcdst, InfoQueue1, trainCodeQueue1, "text2.txt"))
 
     p.start()  # 启动生产者和消费者进程
     time.sleep(10)  # 启动较慢，等待生产者初始化完成
@@ -116,7 +115,9 @@ if __name__ == "__main__":
     InfoQueue1.put("114514")  # magic number,通知消费者所有产品已经生产完毕
     c.join()  # 等待消费者进程完成
 
-    strReproduct("text2.txt", "麻城.txt")  # 重整结果便于合并立折车次
+    strReproduct("text2.txt", "黄冈北部.txt")  # 重整结果便于合并立折车次
+    ''''''
+
 ```
 
 ## 改进信息
@@ -125,15 +126,15 @@ if __name__ == "__main__":
 - 采用uiautomation和路路通pc端程序获取数据
 - 处理方式改为流处理，便于后期使用区间数据
 - 程序改用mutliprocess多进程库建立生产者-消费者模型，改善程序表现
-2. 宜昌襄阳v3.1
+2. 宜昌/襄阳v3.1
 - 加入多级映射完善进路，更好的支持 核心车站--中间线路所、车站--进场立场线路 三级组织架构
 - 整合映射函数，分流为线路映射，车站映射等，合并原先过于稀碎的映射函数
-3. 麻城襄阳东v3.2
+3. 麻城/襄阳东v3.2
 - 修改了部分处理函数，改善可读性并为后续加入多停站区间处理预留接口
 - 修改了路径映射部分，尽可能减少字符写入以减少前期工作量
-4. 天门仙桃潜江v3.3(未完工)
-- 初步完成区间处理分割
-
+4. 红安麻城区间/天仙潜荆州区间v3.3(未完工)
+- 初步完成区间处理分割,进场时间和立场时间仍然需要修改
+- 初步完成虚拟随机临客生成
 ## 后续计划
 1. 尽管目前看来除了字典之外没有更好的映射方法，但是后续优化映射逻辑仍然是首要任务  
 2. 预留区间处理接口  
