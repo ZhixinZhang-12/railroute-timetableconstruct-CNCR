@@ -42,7 +42,7 @@ marshalling = {"": ""}
 # 对于股道，若为边界进出场车站股道为进场立场行走股道编号，若为越行站则为对应正线、越行线编号
 gameStationInfo = {'汉口': ['a', (2, 2), (1, 1), 25],
                    '武汉': ['b', (2, 2), (1, 1), 17], '横店东': ['c', (0, 0), (0, 0), 10],
-                   '红安西': ['d', (1, 1), (2, 2), 10], '麻城北': ['e', (1, 2), (3, 4), 10],
+                   '红安西': ['d', (1, 1), (2, 2), 4], '麻城北': ['e', (1, 2), (3, 4), 16],
                    '合肥南': ['g', (1, 1), (2, 2), 70], '合肥': ['g', (1, 1), (2, 2), 90],
 
 
@@ -87,7 +87,7 @@ seq = 1
 routeList = {"station": ["合肥南", "合肥", "麻城北", "红安西", "武汉", "汉口"],
              "way": ["0", "0", "1", "1", "2", "2"], }
 
-
+#生产者1，从路路通程序获取真是车次
 class lltskbProcess(object):
     def __init__(self, lltskbroute: str, traincount: int):  # 构造函数，调整设置和日志记录并启动程序
 
@@ -200,7 +200,7 @@ class lltskbProcess(object):
         self.window.Exists(1)  # 记录日志
 
         return
-
+    pass
 # 生产者进程函数
 
 
@@ -222,11 +222,16 @@ def obtaintrain(lltroute: str, tc: int, station: str | list[str], InfoQueue: Que
     return
 
 
-def temporateTrainInfo():
+# 生产者2，生成随机车次,作用和initStrFormate类似
 
-    return
+def FakeTrainStrFormate():
+    temporateTrainInner=(8000,8999)
+    temporateTrainOuter=(4000,4999)
 
-
+    pass
+    
+    
+#消费者1/2 通过原始字符生成游戏样式时刻表
 def initStrFormate(initcodeStr: str, initInfoStr: str):
     # 使用最初得到的字符数据
     traincodeStr = initcodeStr.replace("次", "")  # 字符串样式车次便于最后生成游戏样式的字符串
@@ -490,20 +495,22 @@ def gameStrProcess(station: str | list[str], InfoQueueCons: Queue, trainCodeQueu
     return
 
 
+
+
 def strReproduct(file1: str, file2: str):
-    codelist = []
+    codelist = []# 去重以及调整顺序
     infolist = []
     with open(file=file1, mode="r", encoding="utf-8") as f:
         for li in f:
             info1 = li
             code1 = li.split(sep=" ", maxsplit=1)[0]
-            if code1 not in codelist:
+            if code1 not in codelist: #按照车次去重部分
                 codelist.append(code1)
                 infolist.append(info1)
             else:
                 continue
     f.close()
-    infolist.sort()
+    infolist.sort()#重新排序
     with open(file=file2, mode="a", encoding="utf-8") as w:
         for i in infolist:
             w.writelines(i)
