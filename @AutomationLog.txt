@@ -383,4 +383,194 @@ Data acquisition completed.
 2024-05-29 12:35:44.232 红安麻城.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[12:35:44.227682 - 12:35:44.232667]
 2024-05-29 12:35:44.727 红安麻城.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.008s[12:35:44.719716 - 12:35:44.727142]
 2024-05-29 12:35:44.728 红安麻城.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
-2024-05-29 12:35:46.913 红安麻城.py[200] __del__ -> {
+2024-05-29 12:35:46.913 红安麻城.py[200] __del__ -> {2024-06-05 12:02:44.346 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 4.338s[12:02:40.008730 - 12:02:44.346941]
+2024-06-05 12:02:45.080 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 23, SearchTime: 0.228s[12:02:44.851661 - 12:02:45.079030]
+2024-06-05 12:02:45.183 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 44, SearchTime: 0.101s[12:02:45.081983 - 12:02:45.183315]
+2024-06-05 12:02:45.341 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 8, SearchTime: 0.157s[12:02:45.184826 - 12:02:45.341738]
+2024-06-05 12:02:46.858 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 11, SearchTime: 0.270s[12:02:46.588627 - 12:02:46.858259]
+2024-06-05 12:02:48.109 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 9, SearchTime: 0.245s[12:02:47.864870 - 12:02:48.109498]
+2024-06-05 12:02:48.894 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 11, SearchTime: 0.326s[12:02:48.568788 - 12:02:48.894655]
+2024-06-05 12:02:50.030 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.013s[12:02:50.017663 - 12:02:50.030388]
+2024-06-05 12:03:10.008 沪蓉线汉宜段.py[189] generateroute -> {2024-06-05 12:06:36.356 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} does not exist.
+2024-06-05 12:06:36.358 沪蓉线汉宜段.py[102] __init__ -> Find Control Timeout(10s): {ClassName: '#32770', ControlType: WindowControl}
+Data acquisition completed.
+2024-06-05 12:06:36.473 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.107s[12:06:36.367757 - 12:06:36.473900]
+2024-06-05 12:06:36.983 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.009s[12:06:36.975704 - 12:06:36.983930]
+2024-06-05 12:06:37.379 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.011s[12:06:37.368629 - 12:06:37.379268]
+2024-06-05 12:06:37.380 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 12:06:48.326 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 12:08:29.881 沪蓉线汉宜段.py[102] __init__ -> {2024-06-05 12:09:42.757 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} does not exist.
+2024-06-05 12:09:42.758 沪蓉线汉宜段.py[102] __init__ -> Find Control Timeout(10s): {ClassName: '#32770', ControlType: WindowControl}
+Data acquisition completed.
+2024-06-05 12:09:42.849 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.081s[12:09:42.766617 - 12:09:42.849037]
+2024-06-05 12:09:43.387 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.036s[12:09:43.351952 - 12:09:43.387779]
+2024-06-05 12:09:43.780 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.008s[12:09:43.772096 - 12:09:43.780074]
+2024-06-05 12:09:43.781 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 12:09:54.339 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 12:10:18.902 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} does not exist.
+2024-06-05 12:10:18.902 沪蓉线汉宜段.py[102] __init__ -> Find Control Timeout(10s): {ClassName: '#32770', ControlType: WindowControl}
+Data acquisition completed.
+2024-06-05 12:10:18.984 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.076s[12:10:18.909487 - 12:10:18.984790]
+2024-06-05 12:10:19.508 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.009s[12:10:19.500928 - 12:10:19.508951]
+2024-06-05 12:10:19.933 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.010s[12:10:19.924017 - 12:10:19.932976]
+2024-06-05 12:10:19.933 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 12:10:30.498 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 12:13:26.569 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.792s[12:13:25.777976 - 12:13:26.569682]
+2024-06-05 12:13:27.127 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.044s[12:13:27.083851 - 12:13:27.127513]
+2024-06-05 12:13:27.186 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.057s[12:13:27.129508 - 12:13:27.186358]
+2024-06-05 12:13:27.191 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.004s[12:13:27.187356 - 12:13:27.191344]
+2024-06-05 12:13:28.734 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.337s[12:13:28.397897 - 12:13:28.734463]
+2024-06-05 12:13:30.169 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.288s[12:13:29.881955 - 12:13:30.169590]
+2024-06-05 12:13:31.008 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.285s[12:13:30.724465 - 12:13:31.008278]
+2024-06-05 12:13:32.330 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.008s[12:13:32.322193 - 12:13:32.330137]
+2024-06-05 12:13:57.247 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.157s[12:13:57.089858 - 12:13:57.247058]
+2024-06-05 12:17:03.929 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 12:17:29.421 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 12:17:29.429 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[12:17:29.423197 - 12:17:29.428222]
+2024-06-05 12:17:29.942 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.010s[12:17:29.933019 - 12:17:29.942843]
+2024-06-05 12:17:30.437 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.009s[12:17:30.428014 - 12:17:30.437009]
+2024-06-05 12:17:30.437 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 12:17:31.971 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 12:23:07.827 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.689s[12:23:07.138266 - 12:23:07.827169]
+2024-06-05 12:23:08.372 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.039s[12:23:08.334227 - 12:23:08.372631]
+2024-06-05 12:23:08.429 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.056s[12:23:08.373631 - 12:23:08.429294]
+2024-06-05 12:23:08.435 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.004s[12:23:08.431290 - 12:23:08.435278]
+2024-06-05 12:23:10.574 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.319s[12:23:10.255368 - 12:23:10.574315]
+2024-06-05 12:23:11.982 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.274s[12:23:11.708697 - 12:23:11.982751]
+2024-06-05 12:23:12.804 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.253s[12:23:12.551274 - 12:23:12.803526]
+2024-06-05 12:23:14.140 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.015s[12:23:14.126460 - 12:23:14.140617]
+2024-06-05 12:23:39.014 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.153s[12:23:38.861759 - 12:23:39.014763]
+Data acquisition completed.
+2024-06-05 12:23:40.038 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[12:23:40.031166 - 12:23:40.038147]
+2024-06-05 12:23:40.549 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[12:23:40.544082 - 12:23:40.549743]
+2024-06-05 12:23:41.058 沪蓉线汉宜段.py[198] __del__ -> {2024-06-05 18:38:32.191 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.044s[18:38:31.146381 - 18:38:32.190090]
+2024-06-05 18:38:32.744 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.053s[18:38:32.691397 - 18:38:32.744014]
+2024-06-05 18:38:32.822 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.075s[18:38:32.747326 - 18:38:32.822079]
+2024-06-05 18:38:32.829 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.006s[18:38:32.824082 - 18:38:32.829354]
+2024-06-05 18:38:34.596 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.269s[18:38:34.328303 - 18:38:34.596210]
+2024-06-05 18:38:35.807 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.218s[18:38:35.589495 - 18:38:35.807029]
+2024-06-05 18:38:36.571 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.314s[18:38:36.258211 - 18:38:36.571191]
+2024-06-05 18:38:37.668 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.009s[18:38:37.660126 - 18:38:37.668956]
+2024-06-05 18:38:57.399 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.172s[18:38:57.227410 - 18:38:57.399774]
+2024-06-05 18:41:25.748 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 18:41:45.812 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 18:41:45.818 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[18:41:45.813340 - 18:41:45.818598]
+2024-06-05 18:41:46.326 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[18:41:46.320012 - 18:41:46.326317]
+2024-06-05 18:41:46.820 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[18:41:46.813914 - 18:41:46.820114]
+2024-06-05 18:41:46.821 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 18:41:48.583 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 18:49:42.663 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 5, SearchTime: 0.062s[18:49:42.600919 - 18:49:42.663309]
+2024-06-05 18:49:43.276 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.112s[18:49:43.165253 - 18:49:43.276967]
+2024-06-05 18:49:43.363 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.086s[18:49:43.277943 - 18:49:43.363302]
+2024-06-05 18:49:43.452 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 14, SearchTime: 0.088s[18:49:43.365279 - 18:49:43.452839]
+2024-06-05 18:49:45.196 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 17, SearchTime: 0.228s[18:49:44.968258 - 18:49:45.196286]
+2024-06-05 18:49:46.382 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 9, SearchTime: 0.204s[18:49:46.178498 - 18:49:46.382028]
+2024-06-05 18:49:46.985 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 11, SearchTime: 0.170s[18:49:46.815214 - 18:49:46.984152]
+2024-06-05 18:49:48.059 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[18:49:48.050189 - 18:49:48.059252]
+2024-06-05 18:50:07.794 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.161s[18:50:07.633671 - 18:50:07.794073]
+2024-06-05 18:51:53.719 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 18:52:13.785 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 18:52:33.785 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 18:52:53.819 沪蓉线汉宜段.py[189] generateroute -> 2024-06-05 18:55:01.615 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.994s[18:55:00.622032 - 18:55:01.615268]
+2024-06-05 18:55:02.163 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.045s[18:55:02.118198 - 18:55:02.163118]
+2024-06-05 18:55:02.235 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.071s[18:55:02.164135 - 18:55:02.235205]
+2024-06-05 18:55:02.243 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.007s[18:55:02.236181 - 18:55:02.243042]
+2024-06-05 18:55:03.839 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.227s[18:55:03.612287 - 18:55:03.839162]
+2024-06-05 18:55:05.063 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.244s[18:55:04.819310 - 18:55:05.063325]
+2024-06-05 18:55:05.754 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.253s[18:55:05.502075 - 18:55:05.754372]
+2024-06-05 18:55:06.827 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.009s[18:55:06.818286 - 18:55:06.827301]
+2024-06-05 18:55:26.546 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.158s[18:55:26.388034 - 18:55:26.546282]
+2024-06-05 18:57:54.887 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 18:58:14.939 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 18:58:14.945 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[18:58:14.940131 - 18:58:14.945319]
+2024-06-05 18:58:15.451 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[18:58:15.445411 - 18:58:15.451418]
+2024-06-05 18:58:15.945 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[18:58:15.940217 - 18:58:15.945221]
+2024-06-05 18:58:15.945 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 18:58:17.753 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 19:22:39.716 沪蓉线汉宜段.py[102] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.709s[19:22:38.007208 - 19:22:39.716387]
+2024-06-05 19:22:40.271 沪蓉线汉宜段.py[123] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.052s[19:22:40.218669 - 19:22:40.271121]
+2024-06-05 19:22:40.343 沪蓉线汉宜段.py[149] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.073s[19:22:40.272098 - 19:22:40.343964]
+2024-06-05 19:22:40.353 沪蓉线汉宜段.py[152] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.008s[19:22:40.345213 - 19:22:40.353089]
+2024-06-05 19:22:41.717 沪蓉线汉宜段.py[156] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.246s[19:22:41.472275 - 19:22:41.717367]
+2024-06-05 19:22:42.923 沪蓉线汉宜段.py[162] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.222s[19:22:42.701728 - 19:22:42.923126]
+2024-06-05 19:22:43.681 沪蓉线汉宜段.py[170] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.314s[19:22:43.367560 - 19:22:43.681383]
+2024-06-05 19:22:44.793 沪蓉线汉宜段.py[182] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[19:22:44.783321 - 19:22:44.793042]
+2024-06-05 19:23:04.565 沪蓉线汉宜段.py[189] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.314s[19:23:04.251157 - 19:23:04.565943]
+2024-06-05 19:25:31.939 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-05 19:25:51.804 沪蓉线汉宜段.py[189] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 19:25:51.811 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:25:51.805927 - 19:25:51.811782]
+2024-06-05 19:25:52.321 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:25:52.314123 - 19:25:52.321492]
+2024-06-05 19:25:52.813 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:25:52.807240 - 19:25:52.812120]
+2024-06-05 19:25:52.813 沪蓉线汉宜段.py[198] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:25:55.024 沪蓉线汉宜段.py[200] __del__ -> {2024-06-05 19:29:52.924 沪蓉线汉宜段.py[104] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.676s[19:29:51.248067 - 19:29:52.924366]
+2024-06-05 19:29:53.481 沪蓉线汉宜段.py[125] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.056s[19:29:53.426549 - 19:29:53.481828]
+2024-06-05 19:29:53.565 沪蓉线汉宜段.py[151] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.081s[19:29:53.483334 - 19:29:53.565027]
+2024-06-05 19:29:53.572 沪蓉线汉宜段.py[154] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.007s[19:29:53.566005 - 19:29:53.572966]
+2024-06-05 19:29:55.306 沪蓉线汉宜段.py[158] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.229s[19:29:55.078254 - 19:29:55.306474]
+2024-06-05 19:29:56.307 沪蓉线汉宜段.py[164] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.015s[19:29:56.293179 - 19:29:56.307990]
+2024-06-05 19:29:56.839 沪蓉线汉宜段.py[172] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.084s[19:29:56.755730 - 19:29:56.839822]
+2024-06-05 19:29:57.933 沪蓉线汉宜段.py[184] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[19:29:57.921436 - 19:29:57.933063]
+2024-06-05 19:30:17.704 沪蓉线汉宜段.py[191] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.181s[19:30:17.523248 - 19:30:17.704054]
+2024-06-05 19:30:38.887 沪蓉线汉宜段.py[191] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 19:30:38.896 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:30:38.888719 - 19:30:38.895024]
+2024-06-05 19:30:39.401 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:30:39.396728 - 19:30:39.401632]
+2024-06-05 19:30:39.896 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:30:39.890803 - 19:30:39.896499]
+2024-06-05 19:30:39.897 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:30:42.075 沪蓉线汉宜段.py[202] __del__ -> {2024-06-05 19:31:13.938 沪蓉线汉宜段.py[104] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.657s[19:31:12.282923 - 19:31:13.938996]
+2024-06-05 19:31:14.495 沪蓉线汉宜段.py[125] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.054s[19:31:14.441386 - 19:31:14.495436]
+2024-06-05 19:31:14.571 沪蓉线汉宜段.py[151] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.076s[19:31:14.496413 - 19:31:14.571928]
+2024-06-05 19:31:14.579 沪蓉线汉宜段.py[154] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.006s[19:31:14.572962 - 19:31:14.579875]
+2024-06-05 19:31:16.312 沪蓉线汉宜段.py[158] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.240s[19:31:16.072350 - 19:31:16.312119]
+2024-06-05 19:31:17.516 沪蓉线汉宜段.py[164] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.228s[19:31:17.288946 - 19:31:17.516307]
+2024-06-05 19:31:18.036 沪蓉线汉宜段.py[172] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.075s[19:31:17.962792 - 19:31:18.036606]
+2024-06-05 19:31:19.126 沪蓉线汉宜段.py[184] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[19:31:19.114939 - 19:31:19.126830]
+2024-06-05 19:31:38.747 沪蓉线汉宜段.py[191] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.180s[19:31:38.568685 - 19:31:38.747776]
+2024-06-05 19:31:59.806 沪蓉线汉宜段.py[191] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 19:31:59.813 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:31:59.807119 - 19:31:59.813017]
+2024-06-05 19:32:00.320 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:32:00.314924 - 19:32:00.320821]
+2024-06-05 19:32:00.813 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:32:00.808424 - 19:32:00.813333]
+2024-06-05 19:32:00.814 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:32:02.989 沪蓉线汉宜段.py[202] __del__ -> {2024-06-05 19:32:11.249 沪蓉线汉宜段.py[104] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.700s[19:32:09.549250 - 19:32:11.249106]
+2024-06-05 19:32:11.802 沪蓉线汉宜段.py[125] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.052s[19:32:11.750356 - 19:32:11.802121]
+2024-06-05 19:32:11.883 沪蓉线汉宜段.py[151] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.079s[19:32:11.804171 - 19:32:11.883254]
+2024-06-05 19:32:11.891 沪蓉线汉宜段.py[154] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.007s[19:32:11.884242 - 19:32:11.891302]
+2024-06-05 19:32:13.390 沪蓉线汉宜段.py[158] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.222s[19:32:13.169779 - 19:32:13.390786]
+2024-06-05 19:32:14.595 沪蓉线汉宜段.py[164] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.226s[19:32:14.368828 - 19:32:14.594038]
+2024-06-05 19:32:15.108 沪蓉线汉宜段.py[172] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.070s[19:32:15.039166 - 19:32:15.108879]
+2024-06-05 19:32:16.188 沪蓉线汉宜段.py[184] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[19:32:16.178360 - 19:32:16.188366]
+2024-06-05 19:32:35.798 沪蓉线汉宜段.py[191] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.183s[19:32:35.615762 - 19:32:35.798273]
+2024-06-05 19:32:56.819 沪蓉线汉宜段.py[191] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-05 19:32:56.827 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:32:56.820912 - 19:32:56.827446]
+2024-06-05 19:32:57.336 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:32:57.329365 - 19:32:57.335202]
+2024-06-05 19:32:57.827 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:32:57.821217 - 19:32:57.827255]
+2024-06-05 19:32:57.828 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:33:00.006 沪蓉线汉宜段.py[202] __del__ -> {2024-06-05 19:34:46.091 沪蓉线汉宜段.py[104] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.660s[19:34:44.431503 - 19:34:46.091269]
+2024-06-05 19:34:46.644 沪蓉线汉宜段.py[125] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.052s[19:34:46.593375 - 19:34:46.644201]
+2024-06-05 19:34:46.722 沪蓉线汉宜段.py[151] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.076s[19:34:46.646398 - 19:34:46.722282]
+2024-06-05 19:34:46.730 沪蓉线汉宜段.py[154] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.006s[19:34:46.723288 - 19:34:46.730321]
+2024-06-05 19:34:48.448 沪蓉线汉宜段.py[158] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.215s[19:34:48.234265 - 19:34:48.448148]
+2024-06-05 19:34:49.661 沪蓉线汉宜段.py[164] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.235s[19:34:49.426616 - 19:34:49.661522]
+2024-06-05 19:34:50.202 沪蓉线汉宜段.py[172] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.095s[19:34:50.106831 - 19:34:50.201313]
+2024-06-05 19:34:51.290 沪蓉线汉宜段.py[184] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[19:34:51.278560 - 19:34:51.290195]
+2024-06-05 19:35:10.896 沪蓉线汉宜段.py[191] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.182s[19:35:10.714399 - 19:35:10.896929]
+Data acquisition completed.
+2024-06-05 19:35:32.793 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:35:32.786347 - 19:35:32.793223]
+2024-06-05 19:35:33.299 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:35:33.295108 - 19:35:33.299993]
+2024-06-05 19:35:33.793 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[19:35:33.787426 - 19:35:33.793383]
+2024-06-05 19:35:33.793 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:35:35.948 沪蓉线汉宜段.py[202] __del__ -> {2024-06-05 19:35:43.296 沪蓉线汉宜段.py[104] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.580s[19:35:41.716364 - 19:35:43.296447]
+2024-06-05 19:35:43.848 沪蓉线汉宜段.py[125] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.051s[19:35:43.798303 - 19:35:43.848782]
+2024-06-05 19:35:43.931 沪蓉线汉宜段.py[151] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.082s[19:35:43.849757 - 19:35:43.931879]
+2024-06-05 19:35:43.939 沪蓉线汉宜段.py[154] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.007s[19:35:43.933386 - 19:35:43.939879]
+2024-06-05 19:35:45.563 沪蓉线汉宜段.py[158] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.238s[19:35:45.326536 - 19:35:45.563597]
+2024-06-05 19:35:46.748 沪蓉线汉宜段.py[164] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.199s[19:35:46.549300 - 19:35:46.748410]
+2024-06-05 19:35:47.288 沪蓉线汉宜段.py[172] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.099s[19:35:47.190844 - 19:35:47.288714]
+2024-06-05 19:35:48.375 沪蓉线汉宜段.py[184] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[19:35:48.364508 - 19:35:48.375396]
+2024-06-05 19:36:08.138 沪蓉线汉宜段.py[191] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.178s[19:36:07.960327 - 19:36:08.138587]
+Data acquisition completed.
+2024-06-05 19:36:30.230 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[19:36:30.225888 - 19:36:30.230794]
+2024-06-05 19:36:30.738 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:36:30.732247 - 19:36:30.738955]
+2024-06-05 19:36:31.231 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[19:36:31.227052 - 19:36:31.231925]
+2024-06-05 19:36:31.231 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-05 19:36:33.455 沪蓉线汉宜段.py[202] __del__ -> {

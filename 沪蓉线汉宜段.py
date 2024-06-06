@@ -19,15 +19,30 @@ species1default = ['120', 'LCPPPPPPPP', "0"]
 # 游戏里放16编组的实在是太长了，所以目前还是不准备使用对应编组爬取部分
 marshalling = {"": ""}
 
+# a = 沪汉蓉快速客运铁路汉口/武昌方向 | 1 | 1, 2
+# b = 沪汉蓉快速客运铁路宜昌东/重庆北方向 | 1 | 1, 2
+# c = 汉川 | 1 | 1, 2, 3
+# d = 大福 | 1 |
+# e = 天门南 | 1 | 1, 2, 3
+# f = 仙桃西 | 1 | 1, 2
+# g = 潜江 | 1 | 1, 2, 3
+# h = 荆州 | 1 | 1, 2, 3, 4, 5, 6
+# i = 仙桃 | 1 | 1, 2, 3, 4
+# j = 计划延伸至洪湖 | 1 | 2, 1
+# k = 枝江北 | 1 | 1, 3, 2
+# l = 荆荆高速铁路荆门西襄阳东方向(2025年完成) | 1 | 2, 1
+# m = 汉西联络线汉西武昌方向 | 1 | 1, 2
+
 
 # 车站-编号,进场立场股道,用时
 # [车站编号,车辆进场股道,车辆离场行走股道,到达中心车站所用时间]
 # 对于股道，若为边界进出场车站股道为进场立场行走股道编号，若为越行站则为对应正线、越行线编号
-gameStationInfo = {'汉口': ['a', (2, 2), (1, 1), 25],
-                   '武汉': ['b', (2, 2), (1, 1), 17], '横店东': ['c', (0, 0), (0, 0), 10],
-                   '红安西': ['d', (1, 1), (2, 2), 4], '麻城北': ['e', (1, 2), (3, 4), 16],
-                   '合肥南': ['g', (1, 1), (2, 2), 70], '合肥': ['g', (1, 1), (2, 2), 90],
-
+gameStationInfo = {'汉口': ['a', (1, 1), (2, 2), 18], '武昌': ['m', (1, 1), (2, 2), 27],
+                   '宜昌东': ['b', (2, 2), (1, 1), 20],
+                   '汉川': ['c', (2, 3), (1, 1), 10], '大福': ['d', (0, 0), (0, 0), 4],
+                   '天门南': ['e', (1, 1), (2, 3), 16], '仙桃西': ['f', (1, 1), (2, 2), 16],
+                   '潜江': ['g', (2, 3), (1, 1), 70], '荆州': ['h', (1, 3), (4, 6), 90],
+                   '仙桃': ['i', (1, 2), (1, 2), 0], '枝江北': ['k', (1, 1), (2, 3), 20],
 
                    }
 gameStationDefault = ['o',  0, 0, 20]  # 找不到的默认设置
@@ -64,13 +79,16 @@ entrance12 = {
 entrance1Default = (0, 0, 0, 0, 0, 0)
 
 # 单个线路时映射使用
-srcdst = ["合肥", "武汉"]  # .reverse()
-seq = 1
+srcdst = ["汉口", "宜昌东"] # .reverse()
+seq = 0
 # 可能的径路
-routeList = {"station": ["合肥南", "合肥", "麻城北", "红安西", "武汉", "汉口"],
-             "way": ["0", "0", "1", "1", "2", "2"], }
 
-#生产者1，从路路通程序获取真是车次
+routeList = {"station": ["汉口", "武昌", "汉川", "天门南", "仙桃西", "潜江", "荆州", "枝江北", "宜昌东"],
+             "way": ["0", "0", "1", "1", "1", "1", "1", "1", "2"], }
+totaltrain = 20
+# 生产者1，从路路通程序获取真是车次
+
+
 class lltskbProcess(object):
     def __init__(self, lltskbroute: str, traincount: int):  # 构造函数，调整设置和日志记录并启动程序
 
@@ -208,18 +226,21 @@ def obtaintrain(lltroute: str, tc: int, station: str | list[str], InfoQueue: Que
 # 生产者2，生成随机车次,作用和initStrFormate类似
 
 def FakeTrainStrFormate():
-    temporateTrainInner=(8000,8999)
-    temporateTrainOuter=(4000,4999)
+    temporateTrainInner = (8000, 8999)
+    temporateTrainOuter = (4000, 4999)
 
     pass
-    
-    
-#消费者1/2 通过原始字符生成游戏样式时刻表
+
+
+# 消费者1/2 通过原始字符生成游戏样式时刻表
 def initStrFormate(initcodeStr: str, initInfoStr: str):
     # 使用最初得到的字符数据
     traincodeStr = initcodeStr.replace("次", "")  # 字符串样式车次便于最后生成游戏样式的字符串
-    if "B" in traincodeStr:
+    if traincodeStr[-1] == "B":  # 对于不开行车次
         traincodeStr = traincodeStr.replace("B", "")
+    if traincodeStr[-1] == "C":
+        traincodeStr = traincodeStr.replace("C", "")
+
     traincodeList = traincodeStr.split(sep="/")  # 列表样式便于下面处理
     if len(traincodeList) == 2:  # 如果变化车次，使用0号位车次替代便于一起处理
         initInfoStr = initInfoStr.replace(
@@ -379,6 +400,8 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
                            traindf["arrival"]).dt.total_seconds() / 60
     traindf["stoptime"] = traindf["stoptime"].apply(lambda x: int(x))
 
+    traindf.reset_index(inplace=True)
+
     if type(fullRoute2) == list:  # 传入列表即为单个车站的车次样式
         centreStIdx = len(fullRoute2[0])
         # 对于单一车站映射对应进场立场时间，同时转换为字符串
@@ -397,11 +420,11 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
         traindf.at[0, "departure"] = traindf.at[0, "departure"] + \
             datetime.timedelta(minutes=depuseTime)
         # 修改离场时间，暂时不需要
-        # l = len(traindf)
-        # depuseTime = gameStationInfo.get(
-        #     traindf.at[l-1, "station"], gameStationDefault)[3]
-        # traindf.at[l-1, "arrival"] = traindf.at[l-1, "arrival"] - \
-        #     datetime.timedelta(minutes=depuseTime)
+        l = len(traindf)
+        depuseTime = gameStationInfo.get(
+            traindf.at[l-1, "station"], gameStationDefault)[3]
+        traindf.at[l-1, "arrival"] = traindf.at[l-1, "arrival"] - \
+            datetime.timedelta(minutes=depuseTime)
         # 转换为字符串等
         traindf["arrival"] = traindf["arrival"].apply(
             lambda x: x.strftime("%H:%M:%S"))  # type: ignore
@@ -478,22 +501,20 @@ def gameStrProcess(station: str | list[str], InfoQueueCons: Queue, trainCodeQueu
     return
 
 
-
-
 def strReproduct(file1: str, file2: str):
-    codelist = []# 去重以及调整顺序
+    codelist = []  # 去重以及调整顺序
     infolist = []
     with open(file=file1, mode="r", encoding="utf-8") as f:
         for li in f:
             info1 = li
             code1 = li.split(sep=" ", maxsplit=1)[0]
-            if code1 not in codelist: #按照车次去重部分
+            if code1 not in codelist:  # 按照车次去重部分
                 codelist.append(code1)
                 infolist.append(info1)
             else:
                 continue
     f.close()
-    infolist.sort()#重新排序
+    infolist.sort()  # 重新排序
     with open(file=file2, mode="a", encoding="utf-8") as w:
         for i in infolist:
             w.writelines(i)
@@ -508,9 +529,9 @@ if __name__ == "__main__":
     # 中继承接队列
 
     # 生产者进程，中间的75为当前车站车次总数，约数即可
-    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理 
+    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理
     p = multiprocessing.Process(
-        target=obtaintrain, args=(lltskbroute, 80, srcdst, InfoQueue1, trainCodeQueue1,))
+        target=obtaintrain, args=(lltskbroute, totaltrain, srcdst, InfoQueue1, trainCodeQueue1,))
     # 消费者进程
     c = multiprocessing.Process(
         target=gameStrProcess, args=(srcdst, InfoQueue1, trainCodeQueue1, "text2.txt"))
@@ -523,5 +544,5 @@ if __name__ == "__main__":
     InfoQueue1.put("114514")  # magic number,通知消费者所有产品已经生产完毕
     c.join()  # 等待消费者进程完成
 
-    strReproduct("text2.txt", "黄冈北部.txt")  # 重整结果便于合并立折车次
+    strReproduct("text2.txt", "汉宜段.txt")  # 重整结果便于合并立折车次
     ''''''
