@@ -51,7 +51,7 @@
 ### uiautomation版
 **详见武汉枢纽v3以及之后的版本**
 uiautomation自动化从路路通pc端程序获取数据，自动化单一车站，主要信息为路路通pc端程序中单一车次的所有信息，由于在24年年初数据库改动离线数据没有检票口数据，虽然预留有接口但是没有使用的地方了，但是目前可以根据游戏地图本身信息使用多级映射来完善进路信息。数据处理部分则基本不变，主要从之前的批处理改为流处理。
-预留有自动化区间的接口，但是尚未完善
+使用生产者消费者模式进行数据获取和处理的划分，并进行相关预留。在两者中均预留有自动化区间的接口，在沪汉蓉快速客运铁路汉口宜昌段中完成相关分割以及函数编写，但是仍然需要完善时间划分以及整体逻辑。
 
 ### appnium版--不更新弃用  
 **详见济南西2.0版本处**
@@ -92,17 +92,18 @@ entrance12 = {(*hsHankou, "襄阳东", *hsShiyan[::-1]): [1, (6, 8), 1],......}
 ```  
   
 ### 主函数部分
-程序运行的主函数，如需使用进需要修改相关常量，如车站名称，停车数量，以及路路通pc程序的路径等
+程序运行的主函数，如需使用进需要修改相关常量，如车站名称，停车数量，以及路路通pc程序的路径等，基于传入的参数类型来区分对于单一车站处理或者是对于行车区间处理
 ```python
+
 if __name__ == "__main__":
     InfoQueue1 = multiprocessing.Queue()  # 径路信息队列
     trainCodeQueue1 = multiprocessing.Queue()  # 车次号队列
     # 中继承接队列
 
-    # 生产者进程，中间的75为当前车站车次总数，约数即可
-    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理 
+    # 生产者进程，中间的totaltrain为当前车站车次总数，约数即可
+    # srcdst为单一车站字符时按单一车站处理，如果为始发终到站列表则按照区间处理
     p = multiprocessing.Process(
-        target=obtaintrain, args=(lltskbroute, 80, srcdst, InfoQueue1, trainCodeQueue1,))
+        target=obtaintrain, args=(lltskbroute, totaltrain, srcdst, InfoQueue1, trainCodeQueue1,))
     # 消费者进程
     c = multiprocessing.Process(
         target=gameStrProcess, args=(srcdst, InfoQueue1, trainCodeQueue1, "text2.txt"))
@@ -115,8 +116,7 @@ if __name__ == "__main__":
     InfoQueue1.put("114514")  # magic number,通知消费者所有产品已经生产完毕
     c.join()  # 等待消费者进程完成
 
-    strReproduct("text2.txt", "黄冈北部.txt")  # 重整结果便于合并立折车次
-    ''''''
+    strReproduct("text2.txt", "汉宜段.txt")  # 重整结果便于合并立折车次
 
 ```
 
@@ -133,11 +133,11 @@ if __name__ == "__main__":
 - 修改了部分处理函数，改善可读性并为后续加入多停站区间处理预留接口
 - 修改了路径映射部分，尽可能减少字符写入以减少前期工作量
 4. 沪汉蓉快速客运铁路汉口宜昌段v3.3
-- 初步完成区间线路处理函数分割
+- 完成区间线路处理函数分割
 - 进场时间和立场时间仍然需要修改，存在部分可能的时间误差
 5. 红安麻城区间(未完工)
 - 初步完成虚拟随机临客生成
 
 ## 后续计划
 1. 尽管目前看来除了字典之外没有更好的映射方法，但是后续优化映射逻辑仍然是首要任务  
-2. 预留区间处理接口  
+2. 虚拟车次及径路生成    

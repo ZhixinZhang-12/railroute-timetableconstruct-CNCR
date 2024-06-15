@@ -573,4 +573,103 @@ Data acquisition completed.
 2024-06-05 19:36:30.738 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[19:36:30.732247 - 19:36:30.738955]
 2024-06-05 19:36:31.231 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[19:36:31.227052 - 19:36:31.231925]
 2024-06-05 19:36:31.231 沪蓉线汉宜段.py[200] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
-2024-06-05 19:36:33.455 沪蓉线汉宜段.py[202] __del__ -> {
+2024-06-05 19:36:33.455 沪蓉线汉宜段.py[202] __del__ -> {2024-06-14 22:48:49.541 汉十高速铁路汉十段.py[128] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 3, SearchTime: 2.380s[22:48:47.161886 - 22:48:49.541942]
+2024-06-14 22:48:50.112 汉十高速铁路汉十段.py[149] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 23, SearchTime: 0.060s[22:48:50.052729 - 22:48:50.112088]
+2024-06-14 22:48:50.199 汉十高速铁路汉十段.py[160] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 44, SearchTime: 0.085s[22:48:50.113080 - 22:48:50.199129]
+2024-06-14 22:48:51.037 汉十高速铁路汉十段.py[163] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 18, SearchTime: 0.112s[22:48:50.925678 - 22:48:51.037769]
+2024-06-14 22:48:52.263 汉十高速铁路汉十段.py[169] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 9, SearchTime: 0.015s[22:48:52.248174 - 22:48:52.263680]
+2024-06-14 22:48:53.630 汉十高速铁路汉十段.py[196] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 11, SearchTime: 0.991s[22:48:52.639855 - 22:48:53.630979]
+2024-06-14 22:48:55.010 汉十高速铁路汉十段.py[208] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.013s[22:48:54.998175 - 22:48:55.010554]
+2024-06-14 22:49:19.890 汉十高速铁路汉十段.py[215] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 67, SearchTime: 0.199s[22:49:19.691387 - 22:49:19.890685]
+Data acquisition completed.
+2024-06-14 22:49:47.586 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[22:49:47.578617 - 22:49:47.586161]
+2024-06-14 22:49:48.099 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[22:49:48.093248 - 22:49:48.099760]
+2024-06-14 22:49:48.597 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[22:49:48.591625 - 22:49:48.597636]
+2024-06-14 22:49:48.598 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-14 22:49:50.347 汉十高速铁路汉十段.py[226] __del__ -> {2024-06-14 23:02:17.540 汉十高速铁路汉十段.py[128] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.284s[23:02:16.256136 - 23:02:17.540191]
+2024-06-14 23:02:18.090 汉十高速铁路汉十段.py[149] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.045s[23:02:18.045265 - 23:02:18.090826]
+2024-06-14 23:02:18.158 汉十高速铁路汉十段.py[160] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.067s[23:02:18.091825 - 23:02:18.158271]
+2024-06-14 23:02:19.044 汉十高速铁路汉十段.py[163] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.081s[23:02:18.963489 - 23:02:19.044246]
+2024-06-14 23:02:20.276 汉十高速铁路汉十段.py[169] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[23:02:20.263765 - 23:02:20.276925]
+2024-06-14 23:02:21.342 汉十高速铁路汉十段.py[196] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.675s[23:02:20.667240 - 23:02:21.342295]
+2024-06-14 23:02:22.688 汉十高速铁路汉十段.py[208] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[23:02:22.676616 - 23:02:22.687498]
+2024-06-14 23:02:47.468 汉十高速铁路汉十段.py[215] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.162s[23:02:47.306618 - 23:02:47.468657]
+Data acquisition completed.
+2024-06-14 23:03:15.037 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[23:03:15.032331 - 23:03:15.037313]
+2024-06-14 23:03:15.552 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[23:03:15.547272 - 23:03:15.552152]
+2024-06-14 23:03:16.052 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[23:03:16.046286 - 23:03:16.052259]
+2024-06-14 23:03:16.052 汉十高速铁路汉十段.py[224] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-14 23:03:17.857 汉十高速铁路汉十段.py[226] __del__ -> {2024-06-15 20:59:34.976 汉十高速铁路汉十段.py[135] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 2.614s[20:59:32.361850 - 20:59:34.976417]
+2024-06-15 20:59:35.536 汉十高速铁路汉十段.py[156] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.058s[20:59:35.478710 - 20:59:35.536073]
+2024-06-15 20:59:35.616 汉十高速铁路汉十段.py[167] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.079s[20:59:35.537069 - 20:59:35.616858]
+2024-06-15 20:59:37.196 汉十高速铁路汉十段.py[170] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.099s[20:59:37.098729 - 20:59:37.196981]
+2024-06-15 20:59:38.441 汉十高速铁路汉十段.py[176] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[20:59:38.428399 - 20:59:38.441376]
+2024-06-15 20:59:39.535 汉十高速铁路汉十段.py[203] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.714s[20:59:38.820916 - 20:59:39.535162]
+2024-06-15 20:59:40.907 汉十高速铁路汉十段.py[215] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.009s[20:59:40.898954 - 20:59:40.907930]
+2024-06-15 21:00:05.714 汉十高速铁路汉十段.py[222] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.173s[21:00:05.541498 - 21:00:05.714618]
+Data acquisition completed.
+2024-06-15 21:00:33.319 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[21:00:33.314205 - 21:00:33.319191]
+2024-06-15 21:00:33.830 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.008s[21:00:33.822569 - 21:00:33.830525]
+2024-06-15 21:00:34.321 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[21:00:34.315939 - 21:00:34.321918]
+2024-06-15 21:00:34.322 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-15 21:00:36.196 汉十高速铁路汉十段.py[233] __del__ -> {2024-06-15 21:04:37.522 汉十高速铁路汉十段.py[135] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.516s[21:04:36.006450 - 21:04:37.522235]
+2024-06-15 21:04:38.072 汉十高速铁路汉十段.py[156] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.049s[21:04:38.023464 - 21:04:38.072845]
+2024-06-15 21:04:38.150 汉十高速铁路汉十段.py[167] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.077s[21:04:38.073842 - 21:04:38.150639]
+2024-06-15 21:04:39.354 汉十高速铁路汉十段.py[170] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.084s[21:04:39.270826 - 21:04:39.354601]
+2024-06-15 21:04:40.610 汉十高速铁路汉十段.py[176] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.015s[21:04:40.595404 - 21:04:40.610349]
+2024-06-15 21:04:41.679 汉十高速铁路汉十段.py[203] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.680s[21:04:41.000126 - 21:04:41.679961]
+2024-06-15 21:04:43.027 汉十高速铁路汉十段.py[215] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[21:04:43.017628 - 21:04:43.027596]
+Data acquisition completed.
+2024-06-15 21:05:03.207 汉十高速铁路汉十段.py[232] __del__ -> {2024-06-15 21:05:34.660 汉十高速铁路汉十段.py[135] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.456s[21:05:33.205540 - 21:05:34.660996]
+2024-06-15 21:05:35.223 汉十高速铁路汉十段.py[156] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.046s[21:05:35.177208 - 21:05:35.223625]
+2024-06-15 21:05:35.298 汉十高速铁路汉十段.py[167] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.074s[21:05:35.224625 - 21:05:35.298431]
+2024-06-15 21:05:36.324 汉十高速铁路汉十段.py[170] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.082s[21:05:36.243636 - 21:05:36.324926]
+2024-06-15 21:05:37.562 汉十高速铁路汉十段.py[176] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[21:05:37.550544 - 21:05:37.562513]
+2024-06-15 21:05:38.599 汉十高速铁路汉十段.py[203] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.658s[21:05:37.942476 - 21:05:38.599830]
+2024-06-15 21:05:39.983 汉十高速铁路汉十段.py[215] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.012s[21:05:39.971794 - 21:05:39.983721]
+2024-06-15 21:06:04.761 汉十高速铁路汉十段.py[222] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.166s[21:06:04.594966 - 21:06:04.761547]
+Data acquisition completed.
+2024-06-15 21:06:32.295 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[21:06:32.289573 - 21:06:32.295551]
+2024-06-15 21:06:32.811 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[21:06:32.804229 - 21:06:32.810208]
+2024-06-15 21:06:33.308 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[21:06:33.302781 - 21:06:33.308760]
+2024-06-15 21:06:33.309 汉十高速铁路汉十段.py[231] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-15 21:06:35.219 汉十高速铁路汉十段.py[233] __del__ -> {2024-06-15 21:19:30.301 汉十高速铁路汉十段.py[136] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 2.141s[21:19:28.160786 - 21:19:30.301972]
+2024-06-15 21:19:30.859 汉十高速铁路汉十段.py[157] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.051s[21:19:30.808196 - 21:19:30.859061]
+2024-06-15 21:19:30.928 汉十高速铁路汉十段.py[168] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.068s[21:19:30.859061 - 21:19:30.928388]
+2024-06-15 21:19:31.983 汉十高速铁路汉十段.py[171] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.083s[21:19:31.900936 - 21:19:31.983232]
+2024-06-15 21:19:33.226 汉十高速铁路汉十段.py[177] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.014s[21:19:33.212175 - 21:19:33.226137]
+2024-06-15 21:19:34.248 汉十高速铁路汉十段.py[204] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.643s[21:19:33.605254 - 21:19:34.248659]
+2024-06-15 21:19:35.580 汉十高速铁路汉十段.py[216] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.010s[21:19:35.570851 - 21:19:35.580337]
+2024-06-15 21:20:00.274 汉十高速铁路汉十段.py[223] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.151s[21:20:00.124324 - 21:20:00.274430]
+Data acquisition completed.
+2024-06-15 21:20:27.794 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[21:20:27.787512 - 21:20:27.794542]
+2024-06-15 21:20:28.305 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[21:20:28.298426 - 21:20:28.305410]
+2024-06-15 21:20:28.799 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.006s[21:20:28.793066 - 21:20:28.798046]
+2024-06-15 21:20:28.799 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-15 21:20:30.657 汉十高速铁路汉十段.py[234] __del__ -> {2024-06-15 21:26:15.232 汉十高速铁路汉十段.py[136] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.442s[21:26:13.790421 - 21:26:15.232492]
+2024-06-15 21:26:15.786 汉十高速铁路汉十段.py[157] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.042s[21:26:15.745390 - 21:26:15.786793]
+2024-06-15 21:26:15.850 汉十高速铁路汉十段.py[168] selectstation -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.063s[21:26:15.787790 - 21:26:15.850622]
+2024-06-15 21:26:17.037 汉十高速铁路汉十段.py[171] selectstation -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 12, SearchTime: 0.077s[21:26:16.960821 - 21:26:17.037124]
+2024-06-15 21:26:18.287 汉十高速铁路汉十段.py[177] selectstation -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[21:26:18.274300 - 21:26:18.287304]
+2024-06-15 21:26:18.910 汉十高速铁路汉十段.py[204] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.233s[21:26:18.678467 - 21:26:18.910873]
+2024-06-15 21:26:20.249 汉十高速铁路汉十段.py[216] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[21:26:20.238321 - 21:26:20.248288]
+2024-06-15 21:26:44.959 汉十高速铁路汉十段.py[223] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 57, SearchTime: 0.152s[21:26:44.807909 - 21:26:44.959749]
+2024-06-15 21:30:16.994 汉十高速铁路汉十段.py[223] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-15 21:30:17.000 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.005s[21:30:16.995968 - 21:30:17.000954]
+2024-06-15 21:30:17.508 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[21:30:17.502269 - 21:30:17.508310]
+2024-06-15 21:30:18.004 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 0.007s[21:30:17.997667 - 21:30:18.004647]
+2024-06-15 21:30:18.004 汉十高速铁路汉十段.py[232] __del__ -> {ClassName: '#32770', ControlType: WindowControl} does not disappear.
+2024-06-15 21:30:19.896 汉十高速铁路汉十段.py[234] __del__ -> {2024-06-15 23:15:35.818 汉十高速铁路汉十段.py[136] __init__ -> {ClassName: '#32770', ControlType: WindowControl} TraverseControls: 4, SearchTime: 1.553s[23:15:34.265056 - 23:15:35.818284]
+2024-06-15 23:15:36.371 汉十高速铁路汉十段.py[157] initsetting -> {AutomationId: '1024', ControlType: CheckBoxControl} TraverseControls: 22, SearchTime: 0.045s[23:15:36.325825 - 23:15:36.371215]
+2024-06-15 23:15:36.436 汉十高速铁路汉十段.py[183] selectzone -> {AutomationId: '1025', ControlType: CheckBoxControl} TraverseControls: 43, SearchTime: 0.064s[23:15:36.372214 - 23:15:36.436555]
+2024-06-15 23:15:36.443 汉十高速铁路汉十段.py[186] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 2, SearchTime: 0.005s[23:15:36.437552 - 23:15:36.443536]
+2024-06-15 23:15:38.598 汉十高速铁路汉十段.py[190] selectzone -> {AutomationId: '1001', ControlType: EditControl} TraverseControls: 5, SearchTime: 0.348s[23:15:38.250434 - 23:15:38.598017]
+2024-06-15 23:15:39.725 汉十高速铁路汉十段.py[196] selectzone -> {AutomationId: '1006', ControlType: ButtonControl} TraverseControls: 8, SearchTime: 0.013s[23:15:39.712657 - 23:15:39.725578]
+2024-06-15 23:15:40.319 汉十高速铁路汉十段.py[204] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 10, SearchTime: 0.032s[23:15:40.288662 - 23:15:40.319583]
+2024-06-15 23:15:41.668 汉十高速铁路汉十段.py[216] generateroute -> {AutomationId: '1019', ControlType: PaneControl} TraverseControls: 4, SearchTime: 0.011s[23:15:41.657855 - 23:15:41.667823]
+2024-06-15 23:16:06.356 汉十高速铁路汉十段.py[223] generateroute -> {AutomationId: 'DownPageButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.169s[23:16:06.187689 - 23:16:06.356689]
+2024-06-15 23:16:32.807 汉十高速铁路汉十段.py[223] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+2024-06-15 23:16:57.889 汉十高速铁路汉十段.py[223] generateroute -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {AutomationId: 'DownPageButton', ControlType: ButtonControl}
+Data acquisition completed.
+2024-06-15 23:17:25.724 汉十高速铁路汉十段.py[233] __del__ -> {

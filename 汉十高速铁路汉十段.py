@@ -19,20 +19,50 @@ species1default = ['120', 'LCPPPPPPPP', "0"]
 # 游戏里放16编组的实在是太长了，所以目前还是不准备使用对应编组爬取部分
 marshalling = {"": ""}
 
-
+# a = 襄阳东 | 1 | 18, 15, 16, 9, 10, 6, 3, 1, 20, 2, 7, 8, 11, 14, 17, 19
+# b = 谷城北 | 1 | 1, 2
+# c = 枣阳 | 1 | 5, 1, 6, 2, 3, 4
+# d = 郑渝高速南阳东郑州东方向 | 1 | 1, 2
+# e = 郑渝高速神农架重庆北方向 | 1 | 1, 2
+# f = 襄阳东动车所 | 1 | 1, 2, 3
+# g = 襄荆高速荆门东荆州方向(计划2025年完成) | 1 | 2, 1
+# h = 东津线路所 | 1 |
+# i = 随县 | 1 | 1, 2
+# j = 随州南 | 1 | 1, 2, 3, 4
+# k = 安陆西 | 1 | 1, 2
+# l = 云梦东 | 1 | 3, 4, 1, 2
+# m = 孝感东 | 1 | 3, 4, 1, 2
+# n = 天河机场 | 1 | 1, 2, 3, 4
+# o = 汉十高速/汉孝城际汉口方向 | 1 | 2, 1
+# p = 丹江口 | 1 | 1, 2, 3
+# q = 武当山西 | 1 | 1, 2
+# r = 十堰东 | 1 | 1, 2, 3, 4, 5
+# s = 武西高速西安东方向(计划2024年完成) | 1 | 1, 2
+# t = 武汉枢纽直通线新汉阳方向(预留) | 1 | 1, 2
 
 # 车站-编号,进场立场股道,用时
 # [车站编号,车辆进场股道,车辆离场行走股道,到达中心车站所用时间]
 # 对于股道，若为边界进出场车站股道为进场立场行走股道编号，若为越行站则为对应正线、越行线编号
-gameStationInfo = {'汉口': ['a', (1, 1), (2, 2), 18], '武昌': ['m', (1, 1), (2, 2), 27],
-                   '宜昌东': ['b', (2, 2), (1, 1), 20],
-                   '汉川': ['c', (2, 3), (1, 1), 10], '大福': ['d', (0, 0), (0, 0), 4],
-                   '天门南': ['e', (1, 1), (2, 3), 16], '仙桃西': ['f', (1, 1), (2, 2), 16],
-                   '潜江': ['g', (2, 3), (1, 1), 70], '荆州': ['h', (1, 3), (4, 6), 90],
-                   '仙桃': ['i', (1, 2), (1, 2), 0], '枝江北': ['k', (1, 1), (2, 3), 20],
+gameStationInfo = {'襄阳东': ['a', (6, 9), (1, 3), 20],
+                   '谷城北': ['b', (1, 1), (2, 2), 0],
+                   '枣阳': ['c', (6, 6), (4, 5), 0],
+                   '襄阳东动车所': ['f', (0, 0), (0, 0), 0],
+                   '随县': ['i', (1, 1), (2, 2), 0],
+                   '随州南': ['j', (3, 4), (1, 2), 0],
+                   '安陆西': ['k', (2, 2), (1, 1), 0],
+                   '云梦东': ['l', (1, 2), (3, 4), 0],
+                   '孝感东': ['m', (3, 4), (1, 2), 0],
+                   '天河机场': ['n', (1, 2), (3, 4), 0],
+                   '丹江口': ['p', (1, 2), (3, 3), 0],
+                   '武当山西': ['q', (1, 1), (2, 2), 0],
+                   '十堰东': ['r', (1, 3), (4, 5), 20],
+                   '汉口': ['o', (1, 1), (2, 2), 10],
+                   "巴东": ['e', (2, 2), (1, 1), 5],
+                   "重庆北": ['e', (2, 2), (1, 1), 5],
 
+                   "郑州东": ['d', (1, 1), (2, 2), 5]
                    }
-gameStationDefault = ['o',  0, 0, 20]  # 找不到的默认设置
+gameStationDefault = ['f',  0, 0, 20]  # 找不到的默认设置
 # g = 襄荆高速荆门东荆州方向(在建) | 1 | 1, 2
 
 # 提取出车站部分以减少打字量
@@ -66,24 +96,29 @@ entrance12 = {
 entrance1Default = (0, 0, 0, 0, 0, 0)
 
 # 按照区间生成个线路时映射使用
-srcdst = ["汉口", "宜昌东"]  # .reverse()
-seq = 0
-# 可能的径路
+# srcdst0 = ["汉口", "宜昌东"]  # .reverse()
+# seq0 = 0
 
-routeList = {"station": ["汉口", "武昌", "汉川", "天门南", "仙桃西", "潜江", "荆州", "枝江北", "宜昌东"],
-             "way": ["0", "0", "1", "1", "1", "1", "1", "1", "2"], }
-totaltrain = 20
+# # 可能的径路
+# routeList0 = {"station": ["汉口", "武昌", "汉川", "天门南", "仙桃西", "潜江", "荆州", "枝江北", "宜昌东"],
+#              "way": ["0", "0", "1", "1", "1", "1", "1", "1", "2"], }
+# totaltrain0 = 20
 
 # 按照核心车站生成单个线路映射
 srcdstProduce = "襄阳东"  # .reverse()
-srcdstConsume=["汉口","十堰东"]
-seq = 0
+srcdstConsume = ["汉口", "十堰东"]
+seq = 1
 # 可能的径路
+# 0为出发车站，1为中间站，2为离场车站，3为特殊站即不单纯映射自身等需要特殊处理的
+routeList = {"station": ["汉口", "天河机场", "孝感东", "云梦东", "安陆西", "随州南", "随县", "枣阳",
+                         "襄阳东", "谷城北", "丹江口", "武当山西", "十堰东", "巴东", "重庆北", "郑州东"],
+             "way": ["0", "1", "1", "1", "1", "1", "1", "1", "3", "1", "1", "1", "2", "3", "3", "1"], }
+totaltrain = 150
+specialStation = {
 
-routeList = {"station": ["汉口", "天河机场", "孝感东", "云梦东", "安陆西", "随州南", "随县", "枣阳", 
-                         "襄阳东", "谷城北", "丹江口", "武当山西", "十堰东"],
-             "way": ["0", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "2"], }
-totaltrain = 20
+    "e": [("a", "1", "1"), ("h", "4", "2")],
+
+}
 # 生产者1，从路路通程序获取真是车次
 
 
@@ -323,7 +358,7 @@ def sectiontrainFormat(sectionstations: list, InfoListList: list[list[str]], Inf
     return sectionTrain
 
 
-def mapArrLeaTime(t1: pandas.Timestamp, st: str, mark: int) -> str:
+def mapArrLeaTime(t1: pandas.Timestamp, st: str, mark: int) -> pandas.Timestamp:
     # 选取是进场还是立场
     useTime = gameStationInfo.get(st, gameStationDefault)[3]
     if mark == 0:  # 进场减时间
@@ -331,7 +366,7 @@ def mapArrLeaTime(t1: pandas.Timestamp, st: str, mark: int) -> str:
     else:  # 离场加时间
         res = t1+datetime.timedelta(minutes=useTime)
     # 返回时分秒格式的字符串
-    return res.strftime("%H:%M:%S")
+    return res
 
 
 def mapEntrance0(df: pandas.DataFrame) -> list:
@@ -359,9 +394,9 @@ def mapEntrance1(station: str, way: str, fromto=seq) -> int:
     truckrange = gameStationInfo.get(station, gameStationDefault)
     if way == "0":
         idx = 1
-    elif way == "1" and fromto == 0:
+    elif (way == "1" or way == "3") and fromto == 1:
         idx = 1
-    elif way == "1" and fromto == 1:
+    elif (way == "1" or way == "3") and fromto == -1:
         idx = 2
     elif way == "2":
         idx = 2
@@ -423,11 +458,11 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
             traindf.at[l-1, "station"], gameStationDefault)[3]
         traindf.at[l-1, "arrival"] = traindf.at[l-1, "arrival"] - \
             datetime.timedelta(minutes=depuseTime)
-        # 转换为字符串等
-        traindf["arrival"] = traindf["arrival"].apply(
-            lambda x: x.strftime("%H:%M:%S"))  # type: ignore
-        traindf["departure"] = traindf["departure"].apply(
-            lambda x: x.strftime("%H:%M:%S"))  # type: ignore
+        # # 转换为字符串等
+        # traindf["arrival"] = traindf["arrival"].apply(
+        #     lambda x: x.strftime("%H:%M:%S"))  # type: ignore
+        # traindf["departure"] = traindf["departure"].apply(
+        #     lambda x: x.strftime("%H:%M:%S"))  # type: ignore
         traindf["entrance"] = traindf.apply(
             lambda x: mapEntrance1(x["station"], x["way"]), axis="columns")
 
@@ -438,6 +473,29 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
     return traindf
 #
 
+#生成线路所字符串
+def BlockPostStr(specialrow):
+    sp = specialStation.get(specialrow.station, [])
+    specialStr = []  # 记录相对中心车站的位置
+    for t in sp:  # 对于特殊径路中每一个车站
+        truckrange = gameStationInfo.get(t[0], gameStationDefault)
+        timecuns = truckrange[3]
+        if t[2] == "0":  # 特殊车站前序线路所、车站
+            routeStr = "{sta}#{rail}#{clck}#{stay}".format(
+                sta=t[0], rail=t[1], clck=(specialrow.arrival-datetime.timedelta(minutes=timecuns)).strftime("%H:%M:%S"), stay=0)   # type: ignore
+        if t[2] == "1":  # 特殊车站自身
+            routeStr = "{sta}#{rail}#{clck}#{stay}".format(
+                sta=t[0], rail=t[1], clck=specialrow.arrival.strftime("%H:%M:%S"), stay=specialrow.stoptime)   # type: ignore
+        if t[2] == "2":  # 特殊车站后继线路所、车站
+            routeStr = "{sta}#{rail}#{clck}#{stay}".format(
+                sta=t[0], rail=t[1], clck=(specialrow.departure+datetime.timedelta(minutes=timecuns)).strftime("%H:%M:%S"), stay=0)   # type: ignore
+        specialStr.append(routeStr)
+    return " ".join(specialStr)
+
+#生成车辆段，动车所始发终到字符，进需要使用位置判断，位于开始或者结束
+def DepotStr():
+    
+    return
 
 def generateGameStr(infodf: pandas.DataFrame):
     # 最后生成游戏字符串，entrule为股道/检票口在entrance部分的位置范围
@@ -449,21 +507,30 @@ def generateGameStr(infodf: pandas.DataFrame):
     trainStr = "{tc} URBAN {spe} {mar} X1 :".format(
         tc=trcode, spe=typeInfo[0], mar=typeInfo[1])
     routeStrList = [trainStr]
-    for row in infodf.itertuples(index=False):
+    flag = 0  # 理论上应该至少会停靠一个非特殊中间车站
+    for row in infodf.itertuples(index=True):
         if row.way == "0":  # 进场
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.departure, stay=0)  # row.stoptime
+                sta=row.station, rail=row.entrance, clck=row.departure.strftime("%H:%M:%S"), stay=0)   # type: ignore
         elif row.way == "1":  # 停靠
+            flag = 1
+            
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.arrival, stay=row.stoptime)
-        else:  # 立场
+                sta=row.station, rail=row.entrance, clck=row.arrival.strftime("%H:%M:%S"), stay=row.stoptime)  # type: ignore
+        elif row.way == "2":   # 离场
             routeStr = "{sta}#{rail}#{clck}#{stay}".format(
-                sta=row.station, rail=row.entrance, clck=row.arrival, stay=0)
+                sta=row.station, rail=row.entrance, clck=row.arrival.strftime("%H:%M:%S"), stay=0)  # type: ignore
+        else:  # 对于特殊中间车站
+            routeStr = BlockPostStr(row)
+            pass
         routeStrList.append(routeStr)
 
-    ret = " ".join(routeStrList)
-    print(ret)
-    return ret
+    if flag == 0:  # 一个区间车站都不停的一般都是其他线路的车
+        return ""
+    else:
+        ret = " ".join(routeStrList)
+        print(ret)
+        return ret
 
 
 def gameStrProcess(station: str | list[str], InfoQueueCons: Queue, trainCodeQueueCons: Queue, outfile: str):
