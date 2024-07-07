@@ -96,7 +96,7 @@ route12 = {'应城': ['汉西联络线', "汉西站", "汉阳站"], '天门': ['
 
            '鄂州': ['武昌南环线何流方向', "余家湾站"], '黄石': ['武昌南环线何流方向', "余家湾站"], '阳新大冶': ['武昌南环线何流方向', "余家湾站"], '南昌': ['武昌南环线何流方向', "余家湾站"],
            '汉口': ['汉口汉西联络线至汉口站', "汉西站", "汉阳站"], '武昌': ['武客技']}
-
+print(["" for _ in range(0,5)])
 # c = 沪蓉线红安西方向 | 1 | 1, 2
 # a = 汉口站 | 1 | 12, 16, 18, 15, 4, 5, 3, 2, 1, 11, 7, 8, 14, 13, 17, 10, 9, 6
 # b = 沪蓉线汉川方向 | 1 | 1, 2
@@ -151,7 +151,8 @@ routeList = {"station": ["武汉","汉口","红安西","麻城北","合肥南","
  # 区间内所有车站名称
 sectionst = pandas.DataFrame(
     data=routeList, columns=["station", "way"])
-print(sectionst)
+t1=sectionst[sectionst["way"]=="1"]
+print(t1.loc[2])
 
 # 单一车次
 trainst = pandas.DataFrame(data=InfoListList, columns=[
@@ -163,6 +164,11 @@ print(trainst)
 sectionTrain = pandas.merge(
     left=sectionst, right=trainst, how="inner", on=["station"], suffixes=("", ""))
 print(sectionTrain)
+
+d1=["traincode", "station", "arrival", "departure", "entrance", "drop0"]
+
+dictd1d2={ k:[] for k in d1}
+print(dictd1d2)
 
 
 '''

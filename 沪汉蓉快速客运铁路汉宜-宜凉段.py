@@ -423,6 +423,7 @@ def routeStrFormate(fullRoute2: list[list] | pandas.DataFrame):
             traindf.at[l-1, "station"], gameStationDefault)[3]
         traindf.at[l-1, "arrival"] = traindf.at[l-1, "arrival"] - \
             datetime.timedelta(minutes=depuseTime)
+            
         # 转换为字符串等
         traindf["arrival"] = traindf["arrival"].apply(
             lambda x: x.strftime("%H:%M:%S"))  # type: ignore
